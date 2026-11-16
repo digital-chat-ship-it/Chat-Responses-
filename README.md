@@ -4,6 +4,19 @@ step 1
 
 
 /* 2-Box Parallel Side-by-Side Mode (for Sheet 3) */
+
+
+/* 2-Box Parallel Side-by-Side Mode (for Sheet 3) */
+        .grid-container.two-box-sheet #col2,
+        .grid-container.two-box-sheet #card2,
+        .grid-container.two-box-sheet #row1,
+        .grid-container.two-box-sheet #card3,
+        .grid-container.two-box-sheet #card4,
+        .grid-container.two-box-sheet #card5,
+        .grid-container.two-box-sheet .spacer {
+            display: none !important;
+        }
+
         .grid-container.two-box-sheet #col2,
         .grid-container.two-box-sheet #card2,
         .grid-container.two-box-sheet #row1,
