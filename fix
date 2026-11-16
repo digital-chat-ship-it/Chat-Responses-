@@ -1,330 +1,97 @@
-Don't worry at all! Everything disappeared because in JavaScript, if even one
-single curly bracket { or } gets deleted by mistake (or if there's a broken line
-elsewhere in the script), the whole page stops loading the boxes and tabs.
+Here is the easiest possible way to do this. You only need to update 2 tiny
+spots in your file (plus 1 optional spot if you also want typed box text and
+tabs to carry over into the exported copy).
 
-Let's do this in tiny, safe, line-by-line pieces where you only replace a few
-lines at a time.
+The trick is simple: your file already has a #seedData block that gets rewritten
+every time you click Download Standalone App (.html). If we store a freshly
+generated key inside #seedData during export, every exported HTML file
+automatically gets its own private localStorage slot.
 
-Important tip before you start: If it ever goes blank again, press F12 on your
-keyboard and click Console — any red message tells you the exact line that has a
-typo.
+Step 1: Tell the app to use the file's own unique key
 
-Baby Step 2A — Paste 2 new helpers ABOVE setupDefaultSheets
+Find this line (in your <script> section, right below const seed = ...):
 
-1.  Open your file and press Ctrl + F.
-2.  Search for:
-    function setupDefaultSheets() {
-3.  Do NOT delete anything. Click on the empty line right above function
-    setupDefaultSheets() { and paste this:
+const STORAGE_KEY = 'digitalChat_autoClaims_v2';
 
-        function createBlankTwentyOptions() {
-            return Array.from({ length: 20 }, (_, i) => ({
-                name: `Option ${i + 1}`,
-                text: ''
-            }));
-        }
+Replace it with:
 
-        function createThirdSheet() {
-            const sheet1 = state.sheets[0];
-            return {
-                id: 3,
-                name: 'Sheet 3',
-                defaultName: 'Sheet 3',
-                color: '#8b5cf6',
-                boxCount: 2,
-                syncVarsFromSheetId: 1,
-                boxHeadings: ['Box 1', 'Box 2', '', '', '', ''],
-                boxSequences: {
-                    "0": createBlankTwentyOptions(),
-                    "1": createBlankTwentyOptions(),
-                    "2": [],
-                    "3": [],
-                    "4": [],
-                    "5": []
-                },
-                cardColors: ['#008a00', '#0284c7', '', '', '', ''],
-                contents: ['', '', '', '', '', ''],
-                selections: [0, 0, 0, 0, 0, 0],
-                edits: {},
-                variables: sheet1 && sheet1.variables ? { ...sheet1.variables } : {}
-            };
-        }
+const STORAGE_KEY = seed.storageKey || 'digitalChat_autoClaims_v2';
 
-Baby Step 2B — Add Sheet 3 inside setupDefaultSheets
+What this does:
 
-1.  Look just a few lines below where you pasted, inside function
-    setupDefaultSheets() {.
-2.  Find ONLY these 3 lines:
-             state.sheets = [s1, s2];
-             state.activeSheetId = 1;
-             state.sheetCounter = 2;
-3.  Replace ONLY those 3 lines with:
-             const s3 = createThirdSheet();
-             state.sheets = [s1, s2, s3];
-             state.activeSheetId = 1;
-             state.sheetCounter = 3;
+  - Your original file doesn't have a storageKey in #seedData yet, so it keeps
+    using 'digitalChat_autoClaims_v2' (no existing data lost).
+  - Any exported file will have its own seed.storageKey, so it uses that
+    instead.
 
-Baby Step 2C — Update restoreBrowserData (in 2 tiny spots)
+Step 2: Generate a brand-new key every time you export
 
-1.  Look right below setupDefaultSheets, inside function restoreBrowserData() {.
-2.  Find ONLY these 12 lines:
-                 const saved = localStorage.getItem(STORAGE_KEY);
-                 if (!saved) {
-                     setupDefaultSheets();
-                     applyAllCardColors();
-                     return;
-                 }
-                 const data = JSON.parse(saved);
-                 if (data.boxHeadings) boxHeadings = data.boxHeadings;
-                 if (data.cardColors) cardColors = data.cardColors;
-                 if (data.boxSequences) boxSequences = data.boxSequences;
-                 if (data.DEFAULT_VARS) DEFAULT_VARS = data.DEFAULT_VARS;
-                 if (data.state) state = { ...state, ...data.state };
-3.  Replace ONLY those 12 lines with:
-                 if (seed.DEFAULT_VARS) DEFAULT_VARS = seed.DEFAULT_VARS;
-                 const saved = localStorage.getItem(STORAGE_KEY);
-                 if (!saved) {
-                     if (seed.savedState && Array.isArray(seed.savedState.sheets) && seed.savedState.sheets.length) {
-                         state = { ...state, ...seed.savedState };
-                     } else {
-                         setupDefaultSheets();
-                     }
-                 } else {
-                     const data = JSON.parse(saved);
-                     if (data.boxHeadings) boxHeadings = data.boxHeadings;
-                     if (data.cardColors) cardColors = data.cardColors;
-                     if (data.boxSequences) boxSequences = data.boxSequences;
-                     if (data.DEFAULT_VARS) DEFAULT_VARS = data.DEFAULT_VARS;
-                     if (data.state) state = { ...state, ...data.state };
-                 }
-4.  Now look 2 lines below that, and find ONLY these 3 lines:
-                 if (!state.sheets || !state.sheets.length) {
-                     setupDefaultSheets();
-                 }
-5.  Replace ONLY those 3 lines with:
-                 if (!state.sheets || !state.sheets.length) {
-                     setupDefaultSheets();
-                 }
-                 if (!state.sheets.some(s => s.boxCount === 2)) {
-                     state.sheets.push(createThirdSheet());
-                     state.sheetCounter = Math.max(state.sheetCounter || 3, state.sheets.length);
-                 }
+Find this line inside function downloadUpdatedHtml(btn):
 
-(You can save and open the file right now to check — if you didn't miss any { or
-}, you will already see Sheet 3 at the bottom!)
+clone.querySelector('#seedData').textContent = JSON.stringify({ boxHeadings, defaultCardColors: cardColors, boxSequences }, null, 4);
 
-Baby Step 3 — Make Sheet 3 Copy Variables from Sheet 1 & Show 2 Boxes
+Replace it with these 2 lines:
 
-1.  Press Ctrl + F and search for:
+const newKey = 'digitalChat_autoClaims_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6);
+clone.querySelector('#seedData').textContent = JSON.stringify({ storageKey: newKey, boxHeadings, defaultCardColors: cardColors, boxSequences }, null, 4);
 
-    function loadSheet(id) {
+What this does:
 
-2.  Find ONLY these 5 lines:
+  - Every time you export, Date.now() + a random 4-character code creates a
+    unique ID (for example: digitalChat_autoClaims_1744000123456_a9f2).
+  - That key is baked only into the downloaded HTML file, leaving your current
+    file untouched.
+  - Now, clicking Reset Defaults inside File 2 only deletes File 2's key—File 1
+    stays completely safe.
 
-         function loadSheet(id) {
-             const sheet = state.sheets.find(s => s.id === id) || state.sheets[0];
-             ensureSheetStructure(sheet);
-             initHeadings();
-             applyAllCardColors();
+Step 3 (Optional, Recommended): Carry over your typed box text into the new file
 
-3.  Replace ONLY those 5 lines with:
+Because the exported file now has a brand-new empty storage key, opening it for
+the first time will load your dropdown options/headings, not unsaved text you
+typed directly into the boxes or extra tabs—unless you add this quick step too.
 
-         function loadSheet(id) {
-             const sheet = state.sheets.find(s => s.id === id) || state.sheets[0];
-             ensureSheetStructure(sheet);
+A. In downloadUpdatedHtml(btn) (the same line from Step 2), add savedState:
+state, DEFAULT_VARS:
 
-             if (sheet.syncVarsFromSheetId) {
-                 const firstSheet = state.sheets.find(s => s.id === sheet.syncVarsFromSheetId) || state.sheets[0];
-                 if (firstSheet) {
-                     sheet.variables = { ...(firstSheet.variables || {}) };
-                 }
-             }
+const newKey = 'digitalChat_autoClaims_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6);
+clone.querySelector('#seedData').textContent = JSON.stringify({ storageKey: newKey, boxHeadings, defaultCardColors: cardColors, boxSequences, savedState: state, DEFAULT_VARS }, null, 4);
 
-             grid.classList.toggle('two-box-sheet', sheet.boxCount === 2);
-             applyLayout(state.layout || '3x2');
-             if (sheet.boxCount === 2 && activeBoxIdx > 1) {
-                 setActiveBoxIndex(0);
-             }
+B. Inside function restoreBrowserData(), find these lines:
 
-             initHeadings();
-             applyAllCardColors();
+const saved = localStorage.getItem(STORAGE_KEY);
+if (!saved) {
+    setupDefaultSheets();
+    applyAllCardColors();
+    return;
+}
+const data = JSON.parse(saved);
 
-4.  Also, press Ctrl + F and search for:
+Replace them with:
 
-    // DYNAMIC SHEET NAME
+const saved = localStorage.getItem(STORAGE_KEY);
+if (!saved && !seed.savedState) {
+    setupDefaultSheets();
+    applyAllCardColors();
+    return;
+}
+const data = saved ? JSON.parse(saved) : { state: seed.savedState, DEFAULT_VARS: seed.DEFAULT_VARS };
 
-5.  Find ONLY these 4 lines right under it:
+What this does:
 
-     if (key === 'customer_name') {
-         sheet.name = value.trim() || (sheet.defaultName || 'Claim Intake');
-         renderSheetTabs();
-     }
+  - The very first time you open the downloaded file, localStorage is empty for
+    that new key, so it loads the exact boxes, tabs, and variables you exported
+    (seed.savedState).
+  - As soon as you type anything, it saves to that file's own separate
+    localStorage key.
+  - Even if you wipe your browser's site data later, reopening the downloaded
+    HTML restores it right back to the snapshot baked inside that file.
 
-6.  Replace ONLY those 4 lines with:
+Quick Reminder on Testing
 
-             if (key === 'customer_name' && !sheet.syncVarsFromSheetId) {
-                 sheet.name = value.trim() || (sheet.defaultName || 'Claim Intake');
-                 renderSheetTabs();
-             }
-
-Baby Step 4 — Make the 2 Boxes Side-by-Side (Parallel)
-
-1.  Press Ctrl + F and search for:
-
-    function applyLayout(mode) {
-
-2.  Find ONLY these 12 lines:
-
-         function applyLayout(mode) {
-             state.layout = mode === '1col' ? '1col' : '3x2';
-             grid.classList.remove('layout-3x2', 'layout-1col');
-             grid.classList.add(`layout-${state.layout}`);
-             if (state.layout === '3x2') {
-                 grid.style.gridTemplateColumns = '1fr 6px 1fr 6px 1fr';
-                 grid.style.gridTemplateRows = '1fr 6px 1fr';
-             } else {
-                 grid.style.gridTemplateColumns = '';
-                 grid.style.gridTemplateRows = '';
-             }
-         }
-
-3.  Replace ONLY those 12 lines with:
-
-         function applyLayout(mode) {
-             state.layout = mode === '1col' ? '1col' : '3x2';
-             grid.classList.remove('layout-3x2', 'layout-1col');
-             grid.classList.add(`layout-${state.layout}`);
-             const isTwoBox = getActiveSheet()?.boxCount === 2;
-             if (state.layout === '3x2') {
-                 if (isTwoBox) {
-                     grid.style.gridTemplateColumns = '1fr 6px 1fr';
-                     grid.style.gridTemplateRows = '1fr';
-                 } else {
-                     grid.style.gridTemplateColumns = '1fr 6px 1fr 6px 1fr';
-                     grid.style.gridTemplateRows = '1fr 6px 1fr';
-                 }
-             } else {
-                 grid.style.gridTemplateColumns = '';
-                 grid.style.gridTemplateRows = '';
-             }
-         }
-
-4.  Scroll down just a little bit and find ONLY these 4 lines:
-
-             if (activeDrag === 'col1') {
-                 const left = Math.max(130, Math.min(rect.width - 280, e.clientX - rect.left));
-                 grid.style.gridTemplateColumns = `${left}px 6px 1fr 6px 1fr`;
-             }
-
-5.  Replace ONLY those 4 lines with:
-
-             if (activeDrag === 'col1') {
-                 const isTwoBox = getActiveSheet()?.boxCount === 2;
-                 const left = Math.max(130, Math.min(rect.width - (isTwoBox ? 140 : 280), e.clientX - rect.left));
-                 grid.style.gridTemplateColumns = isTwoBox
-                     ? `${left}px 6px 1fr`
-                     : `${left}px 6px 1fr 6px 1fr`;
-             }
-
-Baby Step 5 — Make HTML Export Save All Data (and Fix a Broken Line in Your File)
-
-1.  Press Ctrl + F and search for:
-
-    clone.querySelector('#seedData').textContent
-
-2.  Replace ONLY that 1 line with:
-
-             const exportPayload = { boxHeadings, defaultCardColors: cardColors, boxSequences, DEFAULT_VARS, savedState: state };
-             clone.querySelector('#seedData').textContent = JSON.stringify(exportPayload, null, 4).replace(/<\//g, '<\\/');
-
-3.  Important! In the file you pasted to me, there is a broken English sentence
-    sitting inside downloadAll() that breaks the whole script. Press Ctrl + F
-    and search for:
-
-    in place of
-
-4.  If your file finds it, look right above and around it and find this broken
-    block:
-
-                 const sheetHeadings = getSheetHeadings(s);
-                 s.contents.forEach((c, bIdx) => {
-
-                 const sheetHeadings = getSheetHeadings(s);
-                 const sheetSeqs = getSheetSequences(s);
-                 s.contents.forEach((c, bIdx) => {
-                     const boxHeading = sheetHeadings[bIdx] || `Box ${bIdx + 1}`;
-                     const selectedOptIdx = (s.selections && s.selections[bIdx] !== undefined) ? s.selections[bIdx] : 0;
-                     const optName = sheetSeqs[bIdx]?.[selectedOptIdx]?.name || `Option ${selectedOptIdx + 1}`;
-                     out += `[Box ${bIdx + 1}: ${boxHeading}] (Active: Option ${selectedOptIdx + 1} - ${optName})\n`;
-                     out += `${stripHtmlTags(c).trim()}\n\n`;
-                 });
-
-
-             out += "\n########################################################################\n";
-             out += " SECTION 2: COMPLETE CLAIMS TEMPLATE LIBRARY (ALL 120 OPTIONS)\n";
-             out += "########################################################################\n\n";
-
-             for (let b = 0; b <= 5; b++) {
-                 const libHeadings =
-
-getSheetHeadings(state.sheets[0]); const libSeqs =
-getSheetSequences(state.sheets[0]); in place of boxHeadings[b] and
-boxSequences[b].
-
-            const optionsList = boxSequences[b] || [];
-
-5. **Replace that entire broken block with:**
-```javascript
-             const sheetHeadings = getSheetHeadings(s);
-             const sheetSeqs = getSheetSequences(s);
-             s.contents.forEach((c, bIdx) => {
-                 if (s.boxCount === 2 && bIdx > 1) return;
-                 const boxHeading = sheetHeadings[bIdx] || `Box ${bIdx + 1}`;
-                 const selectedOptIdx = (s.selections && s.selections[bIdx] !== undefined) ? s.selections[bIdx] : 0;
-                 const optName = sheetSeqs[bIdx]?.[selectedOptIdx]?.name || `Option ${selectedOptIdx + 1}`;
-                 out += `[Box ${bIdx + 1}: ${boxHeading}] (Active: Option ${selectedOptIdx + 1} - ${optName})\n`;
-                 out += `${stripHtmlTags(c).trim()}\n\n`;
-             });
-         });
-
-         out += "\n########################################################################\n";
-         out += " SECTION 2: COMPLETE CLAIMS TEMPLATE LIBRARY (ALL 120 OPTIONS)\n";
-         out += "########################################################################\n\n";
-
-         for (let b = 0; b <= 5; b++) {
-             const libHeadings = getSheetHeadings(state.sheets[0]);
-             const libSeqs = getSheetSequences(state.sheets[0]);
-             out += `=== ${libHeadings[b] || `Box ${b + 1}`} ===\n\n`;
-             const optionsList = libSeqs[b] || [];
-
-Baby Step 6 — Fix Alt + ArrowRight Typo
-
-1.  Press Ctrl + F and search for:
-    targetbox
-2.  Find ONLY these 10 lines:
-     if (e.altKey && (e.key === 'ArrowRight' || e.key === 'ArrowLeft' || e.code === 'ArrowRight' || e.code === 'ArrowLeft' || e.key ==='n' || e.key === 'p')) {
-     	e.preventDefault();
-     	const targetBox = activeBoxIdx;
-     if (e.key === 'ArrowRight' || e.key === 'n') {
-     	nextTextInBox(targetBox);
-     	} else {
-     		prevTextInBox(targetBox);
-     	}	
-     toast(`Box ${targetbox + 1}: Option ${sequenceIndices[targetBox] + 1}`);
-     }
-3.  Replace ONLY those 10 lines with:
-             if (e.altKey && (e.key === 'ArrowRight' || e.key === 'ArrowLeft' || e.code === 'ArrowRight' || e.code === 'ArrowLeft' || e.key === 'n' || e.key === 'p')) {
-                 e.preventDefault();
-                 e.stopPropagation();
-                 const maxBox = (getActiveSheet()?.boxCount || 6) - 1;
-                 const targetBox = Math.min(activeBoxIdx, maxBox);
-                 if (e.key === 'ArrowRight' || e.code === 'ArrowRight' || e.key === 'n') {
-                     nextTextInBox(targetBox);
-                 } else {
-                     prevTextInBox(targetBox);
-                 }
-                 toast(`Box ${targetBox + 1}: Option ${sequenceIndices[targetBox] + 1}`);
-             }
-
-Save your file (Ctrl + S) and refresh your browser (F5)! If anything still looks
-blank, press F12 → Console and tell me what the red error line says.
+1.  Save these changes to your main HTML file and refresh it in the browser.
+2.  Export Copy 1 and Copy 2.
+3.  Open both—any edits or Reset Defaults clicks in one copy will no longer
+    affect the other. (Note: If you use your browser settings to "Clear all
+    browsing data" for local files, the browser still wipes localStorage for all
+    file:// pages at once—which is why Step 3 is so helpful, because each file
+    keeps its exported snapshot inside the HTML itself.)
