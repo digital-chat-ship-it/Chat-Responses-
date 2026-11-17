@@ -1,0 +1,301 @@
+{
+  "meta": {
+    "deckTitle": "Digital Chat New Claim Intake — Call Monitoring Guide Recommendations",
+    "deckSubtitle": "A channel-specific proposal to remove unnecessary questions, simplify conditional intake, and retain the controls needed to open and route the claim.",
+    "deptName": "Claims Response Operations",
+    "teamName": "Digital Chat",
+    "deckPresenter": "Namisha Sharma - Claims Advisor I",
+    "deckDate": "November 16, 2026",
+    "deckSummary": "This proposal reviews each Call Monitoring Guide Element against the Digital Chat journey. The recommendation is to use information already provided, combine related questions, avoid investigative follow-up during initial intake, and ask only what is needed to open the claim, identify injuries, arrange an immediate service, or give the customer the required next step.",
+    "lblRemove": "What Should Be Removed from Digital Chat",
+    "lblPartial": "What Should Be Simplified / Adapted for Digital Chat",
+    "lblKeep": "What Should Be Kept in Digital Chat",
+    "hdrCall": "Current Call Monitoring Guide Requirement",
+    "hdrChat": "Recommended Digital Chat Treatment"
+  },
+  "glossary": [
+    {
+      "avoid": "Repeat authentication questions inside the claim intake",
+      "approved": "Use the authenticated chat entry; do not re-authenticate during intake",
+      "note": "A claim is opened in chat only when authenticated entry is already established."
+    },
+    {
+      "avoid": "Send Privacy/PIPEDA and Digital Consent as separate conversations",
+      "approved": "Send Privacy/PIPEDA and Digital Consent together; record each outcome separately",
+      "note": "Reduces messages without combining the required consent outcomes."
+    },
+    {
+      "avoid": "Probe after a clear customer statement",
+      "approved": "Use the insured’s own clear statement and ask only for missing essentials",
+      "note": "Keeps the intake focused on claim opening rather than investigation."
+    },
+    {
+      "avoid": "Ask every questionnaire field aloud/in chat",
+      "approved": "Use known facts and Unknown where permitted; ask only scenario-triggered essentials",
+      "note": "Prevents the questionnaire from becoming a second full interview."
+    },
+    {
+      "avoid": "Repeat a need the customer already stated",
+      "approved": "Act on information already provided, including rental, tow, injuries and location",
+      "note": "Avoids duplicate questions and keeps the conversation moving."
+    }
+  ],
+  "elements": [
+    {
+      "id": 1037,
+      "code": "1-02.2",
+      "section": "Injury",
+      "status": "remove",
+      "proposed": true,
+      "callText": "(Inbound/Outbound) The advisor is expected to obtain PIPEDA consent from all appropriate injured parties and document the claim.",
+      "chatText": "Proposed Digital Chat standard: Remove the requirement to obtain consent from additional injured parties inside this insured-only chat. Consent can only be obtained here from the person who entered authenticated. Record other injured parties and leave their own consent/follow-up to an authenticated contact with the Claims Advisor.",
+      "rationale": "The current chat process cannot manually authenticate another injured person who is not the authenticated customer in the session."
+    },
+    {
+      "id": 1001,
+      "code": "1-02.3",
+      "section": "Injury",
+      "status": "remove",
+      "proposed": true,
+      "callText": "(Outbound) PIPEDA consent must be obtained from each injured party prior to beginning the AB and/or BI questionnaire.",
+      "chatText": "Proposed Digital Chat standard: Remove this element from inbound claim-opening chat. It is specific to outbound or recorded voice-call handling.",
+      "rationale": "The underlying requirement remains relevant to the applicable voice/outbound workflow, but it should not create an inbound chat monitoring requirement."
+    },
+    {
+      "id": 1002,
+      "code": "1-03.2",
+      "section": "All",
+      "status": "remove",
+      "proposed": true,
+      "callText": "The call recording disclosure must be read to vendors and any third parties including when the call is being transferred",
+      "chatText": "Proposed Digital Chat standard: Remove this element from inbound claim-opening chat. It is specific to outbound or recorded voice-call handling.",
+      "rationale": "The underlying requirement remains relevant to the applicable voice/outbound workflow, but it should not create an inbound chat monitoring requirement."
+    },
+    {
+      "id": 1003,
+      "code": "1-03.3",
+      "section": "All",
+      "status": "remove",
+      "proposed": true,
+      "callText": "Inform all participants who join the call that the conversation is being recorded. This would also include calls to vendors: \"I would like to inform you that your call will be recorded for training purposes; to enhance customer service, security and to confirm our discussion with you\" See -> \"Authentication (td.com)\"",
+      "chatText": "Proposed Digital Chat standard: Remove this element from inbound claim-opening chat. It is specific to outbound or recorded voice-call handling.",
+      "rationale": "The underlying requirement remains relevant to the applicable voice/outbound workflow, but it should not create an inbound chat monitoring requirement."
+    },
+    {
+      "id": 1051,
+      "code": "2-02.5",
+      "section": "Auto / Res",
+      "status": "remove",
+      "proposed": true,
+      "callText": "For cases where the loss is reported by someone other than the named customer, an attempt must be made to complete the following fields during the new contact creation: Full name, & best contact number(s).",
+      "chatText": "Proposed Digital Chat standard: Remove non-named-reporter intake from this channel. A claim can only be opened for the contact on the account who entered the chat authenticated.",
+      "rationale": "The current Digital Chat process cannot manually authenticate another reporter to open the claim."
+    },
+    {
+      "id": 1062,
+      "code": "2-04.4",
+      "section": "Auto",
+      "status": "remove",
+      "proposed": true,
+      "callText": "The advisor is expected to ask & complete the total theft questionnaire in CC.",
+      "chatText": "Proposed Digital Chat standard: Do not complete the full Total Theft questionnaire during initial chat intake. Open the claim using the essential theft facts and leave the detailed questionnaire to the handling Claims Advisor.",
+      "rationale": "The questionnaire is lengthy and can be reviewed during the Claims Advisor’s initial follow-up."
+    },
+    {
+      "id": 1065,
+      "code": "2-05.4",
+      "section": "Auto",
+      "status": "remove",
+      "proposed": true,
+      "callText": "Determine and document whether the trip was for business or personal purposes and document this accurately in the applicable field.",
+      "chatText": "Proposed Digital Chat standard: Remove the business-versus-personal trip question from the initial Digital Chat intake and leave it for Claims Advisor follow-up if needed.",
+      "rationale": "This question does not need to interrupt the core claim-opening conversation."
+    },
+    {
+      "id": 1066,
+      "code": "2-05.5",
+      "section": "Auto",
+      "status": "remove",
+      "proposed": true,
+      "callText": "If the passenger in the vehicle is a minor you do not have to ask their address &/or phone number if you confirm that the other driver/passenger is their parent or legal guardian, & they live under the same household. If this is the case, you are still expected to transfer the address & contact number over to the passenger incident.",
+      "chatText": "Proposed Digital Chat standard: This detailed address/contact transfer rule is not needed for uninjured passengers under the proposed chat model. For an injured minor, use the applicable injury/AB process instead.",
+      "rationale": "The proposed intake does not collect full personal details for uninjured passengers."
+    },
+    {
+      "id": 1026,
+      "code": "2-07.2",
+      "section": "Auto",
+      "status": "remove",
+      "proposed": true,
+      "callText": "Clearly document all affected body panels in the damage description field.",
+      "chatText": "Proposed Digital Chat standard: Remove the separate requirement to identify every affected body panel during initial chat. Use the damage description provided by the insured and leave detailed panel confirmation to repair/appraisal/Claims Advisor follow-up.",
+      "rationale": "Panel-by-panel questioning adds chat friction without changing the immediate claim-opening decision."
+    },
+    {
+      "id": 1004,
+      "code": "2-08.3",
+      "section": "Injury",
+      "status": "remove",
+      "proposed": true,
+      "callText": "(Outbound) The BI questionnaire must be completed with all available BI claimants in Alberta and Atlantic provinces ONLY.",
+      "chatText": "Proposed Digital Chat standard: Remove this element from inbound claim-opening chat. It is specific to outbound or recorded voice-call handling.",
+      "rationale": "The underlying requirement remains relevant to the applicable voice/outbound workflow, but it should not create an inbound chat monitoring requirement."
+    },
+    {
+      "id": 1005,
+      "code": "2-12.5",
+      "section": "Injury",
+      "status": "remove",
+      "proposed": true,
+      "callText": "(Outbound) If the injured party is not available then the advisor must setup a follow-up time unless there are confirmed injuries. If the injuries are confirmed, the advisor is expected to setup the exposure instead of a follow-up activity.",
+      "chatText": "Proposed Digital Chat standard: Remove this element from inbound claim-opening chat. It is specific to outbound or recorded voice-call handling.",
+      "rationale": "The underlying requirement remains relevant to the applicable voice/outbound workflow, but it should not create an inbound chat monitoring requirement."
+    },
+    {
+      "id": 1006,
+      "code": "2-12.6",
+      "section": "Injury",
+      "status": "remove",
+      "proposed": true,
+      "callText": "(Outbound) The advisor is expected to screen all claims with confirmed Third Party injuries. In the event the Third Party is not available to speak with OR Third Party information not available, the advisor is expected to contact the Third Party insurer and speak with the handling adjuster. If any member of the household is reached (any relative) and advises no injuries to any other party, no follow up is required",
+      "chatText": "Proposed Digital Chat standard: Remove this element from inbound claim-opening chat. It is specific to outbound or recorded voice-call handling.",
+      "rationale": "The underlying requirement remains relevant to the applicable voice/outbound workflow, but it should not create an inbound chat monitoring requirement."
+    },
+    {
+      "id": 1007,
+      "code": "2-12.7",
+      "section": "Injury",
+      "status": "remove",
+      "proposed": true,
+      "callText": "(Outbound) In the event of TD vs TD, the advisor will review the claims & create the exposure based on best judgement",
+      "chatText": "Proposed Digital Chat standard: Remove this element from inbound claim-opening chat. It is specific to outbound or recorded voice-call handling.",
+      "rationale": "The underlying requirement remains relevant to the applicable voice/outbound workflow, but it should not create an inbound chat monitoring requirement."
+    },
+    {
+      "id": 1008,
+      "code": "2-12.8",
+      "section": "Injury",
+      "status": "remove",
+      "proposed": true,
+      "callText": "(Outbound) When speaking with a BI claimant, the advisor is expected to confirm the mailing address and update Parties Involved when applicable",
+      "chatText": "Proposed Digital Chat standard: Remove this element from inbound claim-opening chat. It is specific to outbound or recorded voice-call handling.",
+      "rationale": "The underlying requirement remains relevant to the applicable voice/outbound workflow, but it should not create an inbound chat monitoring requirement."
+    },
+    {
+      "id": 1100,
+      "code": "3-06.4",
+      "section": "Res",
+      "status": "remove",
+      "proposed": true,
+      "callText": "The advisor is expected to advise the customer of any applicable limits on the policy, this includes Sewer Backup and Extended Water Damage.",
+      "chatText": "Proposed Digital Chat standard: Do not review Sewer Backup or Extended Water Damage policy limits during initial Residential chat intake. Leave detailed limit discussion to the handling Claims Advisor.",
+      "rationale": "Detailed limit discussions can expand the intake into a lengthy coverage conversation before the claim facts and immediate needs are finished."
+    },
+    {
+      "id": 1108,
+      "code": "3-08.3",
+      "section": "Res",
+      "status": "remove",
+      "proposed": true,
+      "callText": "If the home is unlivable (e.g., large loss fires, prohibited access (government order) and mass evacuations. Inclusive of claims during/outside of business hours) & the customer requires additional living expenses, the advisor is expected to assign to My Key. – only applicable to Res claims. Out of scope for MyKey: \"Grey Area\" claims, claims with an advisor/dispatcher assigned and claims in licensed provinces.",
+      "chatText": "Proposed Digital Chat standard: Do not assign MyKey during initial Digital Chat intake. If the home is unlivable, advise the customer they may arrange a reasonable hotel themselves, keep the receipts, and the Claims Advisor will discuss next steps and confirm whether reimbursement is covered.",
+      "rationale": "Removes a longer service workflow from initial chat while still giving the customer a practical immediate step without promising coverage."
+    },
+    {
+      "id": 1009,
+      "code": "3-14.3",
+      "section": "Injury",
+      "status": "remove",
+      "proposed": true,
+      "callText": "(Outbound) All BI notes must be coded as \"Related to BI\".",
+      "chatText": "Proposed Digital Chat standard: Remove this element from inbound claim-opening chat. It is specific to outbound or recorded voice-call handling.",
+      "rationale": "The underlying requirement remains relevant to the applicable voice/outbound workflow, but it should not create an inbound chat monitoring requirement."
+    },
+    {
+      "id": 1010,
+      "code": "3-14.4",
+      "section": "Injury",
+      "status": "remove",
+      "proposed": true,
+      "callText": "(Outbound) The BI questionnaire must be pasted into a BI note.",
+      "chatText": "Proposed Digital Chat standard: Remove this element from inbound claim-opening chat. It is specific to outbound or recorded voice-call handling.",
+      "rationale": "The underlying requirement remains relevant to the applicable voice/outbound workflow, but it should not create an inbound chat monitoring requirement."
+    },
+    {
+      "id": 1011,
+      "code": "3-14.5",
+      "section": "All",
+      "status": "remove",
+      "proposed": true,
+      "callText": "The advisor is expected to document the name(s) of the caller(s) who were read the call recording disclosure",
+      "chatText": "Proposed Digital Chat standard: Remove this element from inbound claim-opening chat. It is specific to outbound or recorded voice-call handling.",
+      "rationale": "The underlying requirement remains relevant to the applicable voice/outbound workflow, but it should not create an inbound chat monitoring requirement."
+    },
+    {
+      "id": 1012,
+      "code": "3-16.1",
+      "section": "Injury",
+      "status": "remove",
+      "proposed": true,
+      "callText": "(Outbound AB/BI) If claimant is reached, the activity must be completed from the work plan & note the claim with the conversation",
+      "chatText": "Proposed Digital Chat standard: Remove this element from inbound claim-opening chat. It is specific to outbound or recorded voice-call handling.",
+      "rationale": "The underlying requirement remains relevant to the applicable voice/outbound workflow, but it should not create an inbound chat monitoring requirement."
+    },
+    {
+      "id": 1035,
+      "code": "1-01.1",
+      "section": "All",
+      "status": "partial",
+      "proposed": true,
+      "callText": "Authentication must occur before disclosing any policy specific information. Refer to Authentication Procedure Authentication (td.com) · Note: The mailing address cannot be used as a valid authentication credential.",
+      "chatText": "Proposed Digital Chat standard: Claim opening is available only when the insured has already authenticated on entry to chat. Do not run a second manual authentication inside the intake. If authenticated entry is not established, do not open the claim in chat.",
+      "rationale": "Uses the authentication already completed before the claim-opening journey and avoids duplicate questions."
+    },
+    {
+      "id": 1036,
+      "code": "1-02.1",
+      "section": "All",
+      "status": "partial",
+      "proposed": true,
+      "callText": "The advisor is expected to obtain PIPEDA consent once from the appropriate party and document the claim.",
+      "chatText": "Proposed Digital Chat standard: Send Privacy/PIPEDA Consent and Digital Consent together in one chat message. Record the customer’s response to each consent separately.",
+      "rationale": "Combines two required consent conversations into one customer message without combining the recorded outcomes."
+    },
+    {
+      "id": 1013,
+      "code": "1-02.4",
+      "section": "All",
+      "status": "partial",
+      "proposed": true,
+      "callText": "(Inbound/Outbound) Play the script when required. If reading aloud, ensure it is read verbatim.",
+      "chatText": "Proposed Digital Chat standard: Keep the required outcome, but use the approved written chat wording instead of a voice-only, read-aloud or transferred-call step.",
+      "rationale": "Adapts the channel without adding an unnecessary voice-based step to text chat."
+    },
+    {
+      "id": 1014,
+      "code": "1-02.5",
+      "section": "All",
+      "status": "partial",
+      "proposed": true,
+      "callText": "If response to consent is no, ask the customer if they heard the Privacy Consent recording and offer to play/read if they did not. Manually confirm if the client consents.",
+      "chatText": "Proposed Digital Chat standard: If the customer says No to consent, ask whether they have any questions about the consent. If they continue to decline, complete the claim intake but do not set up services in chat; the Claims Advisor can follow up on next steps.",
+      "rationale": "Replaces an audio-recording question with a clear written-chat response to a consent refusal."
+    },
+    {
+      "id": 1015,
+      "code": "1-02.6",
+      "section": "All",
+      "status": "partial",
+      "proposed": true,
+      "callText": "If response to consent is no response, ask the customer if they heard the Privacy Consent recording and offer to play/read if they did not. Manually confirm if the client consents.",
+      "chatText": "Proposed Digital Chat standard: If the customer does not answer the consent message, ask once whether they can review and respond to it. Do not treat silence as consent or repeat an audio-recording question.",
+      "rationale": "Text chat has no privacy recording to replay; the consent response still needs to be clear."
+    },
+    {
+      "id": 1016,
+      "code": "1-02.7",
+      "section": "All",
+      "status": "partial",
+      "proposed": true,
+      "callText": "If the client is transferred, play/read the PIPEDA consent. Manually confirm if the client consents · PIPEDA consent is obtained through IVR prompter · Refer to the Consent Procedure -> \"Claims Consent - Privacy and Digital Disclosure (td.com)\"",
+      "chatText": "Proposed Digital Chat standard: If consent still needs to be obtained after a transfer, send the same approved written consent m
