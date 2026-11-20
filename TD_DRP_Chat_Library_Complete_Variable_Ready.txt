@@ -1,0 +1,701 @@
+TD INSURANCE | PREFERRED REPAIR NETWORK (DRP) CHAT MESSAGE LIBRARY
+CUSTOMER-READY TEXT | EXACT VARIABLE PLACEHOLDERS
+
+Variables used in messages: {{drp}}  {{drp_adr}}  {{non-drp}}
+
+
+
+========================================================================================
+01 | FIRST OFFER — RECOMMEND THE ACTUAL SHOP AND LOCATION
+========================================================================================
+
+NOTE 001: Standard opening | preferred shop | first recommendation
+CUSTOMER MESSAGE:
+Based on your location, I'd recommend {{drp}}, located at {{drp_adr}}. It's part of our TD Insurance Preferred Repair Network and works directly with us to help coordinate the repair process. Would you like to proceed with this facility?
+
+NOTE 002: Short opening | customer is answering quickly
+CUSTOMER MESSAGE:
+I recommend {{drp}} at {{drp_adr}}. As a TD Insurance Preferred Repair Shop, they coordinate directly with us on repairs, which can make things easier for you. Would this location work?
+
+NOTE 003: Warm opening | customer has had a stressful collision
+CUSTOMER MESSAGE:
+I know you've already had a lot to deal with following the accident. To make the repair process easier, I'd recommend {{drp}}, located at {{drp_adr}}. They're part of our preferred network and work directly with TD Insurance on repair coordination. Would you like to use this facility?
+
+NOTE 004: Busy customer | first offer emphasizes coordination
+CUSTOMER MESSAGE:
+Since convenience is important, I'd recommend {{drp}} at {{drp_adr}}. They work directly with our claims team to coordinate repairs, helping reduce the back-and-forth for you. Would you like to proceed there?
+
+NOTE 005: Rental likely needed | first offer mentions coordination but not guaranteed coverage
+CUSTOMER MESSAGE:
+Since you may need transportation during repairs, I'd recommend {{drp}}, located at {{drp_adr}}. This preferred facility can help coordinate repair and rental timing if rental coverage applies to your claim. Would this shop be convenient for you?
+
+NOTE 006: Customer cares about long-term repair reassurance | lead with warranty
+CUSTOMER MESSAGE:
+One option I'd recommend is {{drp}} at {{drp_adr}}. Repairs through our preferred network include a lifetime repair warranty while you own the vehicle and remain insured with TD Insurance. Would you like to consider this facility?
+
+NOTE 007: Customer has never made a claim | simplified offer
+CUSTOMER MESSAGE:
+I'll help you review a repair option. I'd recommend {{drp}}, located at {{drp_adr}}. It's a TD Insurance Preferred Repair Shop, so it works directly with us on repair coordination. Would you be comfortable using this location?
+
+NOTE 008: Customer asks for nearest practical preferred facility
+CUSTOMER MESSAGE:
+A preferred facility we can consider is {{drp}}, located at {{drp_adr}}. This shop works directly with TD Insurance on repair arrangements and updates. Does this location suit you?
+
+NOTE 009: Customer wants to know the recommended shop before benefits
+CUSTOMER MESSAGE:
+The preferred shop I'd recommend is {{drp}}, at {{drp_adr}}. It's in our TD Insurance Preferred Repair Network. One key benefit is direct repair coordination with our claims team. Would you like to proceed with this location?
+
+NOTE 010: Customer says they want an easy process
+CUSTOMER MESSAGE:
+For a more coordinated repair experience, I'd suggest {{drp}}, located at {{drp_adr}}. As a preferred facility, the shop works directly with us throughout the repair process. Would you like to select it?
+
+NOTE 011: Preferred shop recommendation | customer is comparing options
+CUSTOMER MESSAGE:
+We can certainly review your options. My recommendation is {{drp}}, located at {{drp_adr}}, because it's a TD Insurance Preferred Repair Shop with direct coordination between the repair facility and our claims team. Would you like to consider it?
+
+NOTE 012: Customer requests a professional recommendation
+CUSTOMER MESSAGE:
+Based on the available repair options and your location, my recommendation is {{drp}} at {{drp_adr}}. This preferred facility works directly with TD Insurance on repair communication and coordination. Would you like me to proceed with that selection?
+
+
+========================================================================================
+02 | FIRST NO — INTRODUCE ONE DIFFERENT BENEFIT
+========================================================================================
+
+NOTE 013: First no | initial offer was coordination | now introduce lifetime warranty
+CUSTOMER MESSAGE:
+Of course, the decision is yours. Before we move on, one additional benefit of {{drp}} is that repairs are backed by a lifetime warranty while you own the vehicle and remain insured with TD Insurance. Would that make you more comfortable considering this shop?
+
+NOTE 014: First no | initial offer was warranty | now introduce coordination
+CUSTOMER MESSAGE:
+I understand. Another reason to consider {{drp}} is that the facility works directly with TD Insurance on repair communication and updates, so you may have less to coordinate yourself. Would you be open to reconsidering it?
+
+NOTE 015: First no | initial offer was rental | now introduce warranty
+CUSTOMER MESSAGE:
+I respect your preference. One other benefit of {{drp}} is the lifetime repair warranty, which applies while you own the vehicle and remain insured with TD Insurance. Would that be helpful in making your decision?
+
+NOTE 016: First no | customer is reluctant but has not chosen another shop | introduce direct payment
+CUSTOMER MESSAGE:
+Understood. One other convenience with {{drp}} is that TD Insurance issues payment directly to the preferred facility for approved repairs, rather than having you coordinate the insurer's repair payment with the shop. Would you like to consider that option?
+
+NOTE 017: First no | customer says the location might be inconvenient | emphasize suitability, not pressure
+CUSTOMER MESSAGE:
+I understand that location is important. {{drp}} is at {{drp_adr}}, and I don't want you to choose somewhere inconvenient. If this location doesn't work, we can consider another practical preferred facility or proceed with your preferred arrangements.
+
+NOTE 018: First no | customer says they have to think | keep response light
+CUSTOMER MESSAGE:
+Absolutely, you should feel comfortable with the decision. One reason customers may value {{drp}} is its direct communication with TD Insurance during repairs. Is there a particular concern about this shop that I can help clarify?
+
+NOTE 019: First no | customer only says “No thanks” | short second offer
+CUSTOMER MESSAGE:
+No problem. Just one other point to consider: {{drp}} provides the TD Insurance preferred-network lifetime repair warranty while you own the vehicle and remain insured with us. Would you like to reconsider, or should we move ahead with your preferred option?
+
+NOTE 020: First no | customer prioritizes less paperwork | payment benefit
+CUSTOMER MESSAGE:
+I understand. With {{drp}}, payment for approved repairs goes directly from TD Insurance to the shop, which can reduce the payment-related arrangements you need to manage. Would that make this facility a better fit?
+
+NOTE 021: First no | customer says they do not trust insurer-recommended shops | emphasize choice and standards
+CUSTOMER MESSAGE:
+I understand wanting to make an independent choice. {{drp}} is part of our preferred network and meets TD Insurance repair standards, but you're not required to use it. Would it help if I explained one of the benefits that comes with the preferred pathway?
+
+NOTE 022: First no | customer wants to compare before deciding
+CUSTOMER MESSAGE:
+Of course. For comparison, {{drp}} offers direct coordination with TD Insurance on the repair process, while a non-preferred facility typically requires you to coordinate more directly with the shop. Would you like to keep {{drp}} under consideration?
+
+
+========================================================================================
+03 | SECOND HESITATION — ANOTHER DISTINCT BENEFIT, THEN RESPECT THE DECISION
+========================================================================================
+
+NOTE 023: Second hesitation | after coordination and warranty | introduce direct payment
+CUSTOMER MESSAGE:
+I understand. One final practical difference is that TD Insurance pays {{drp}} directly for approved repairs. You won't need to manage that insurer-to-shop payment yourself. Would you prefer {{drp}}, or would you like to continue with {{non-drp}}?
+
+NOTE 024: Second hesitation | after warranty and payment | introduce shop-to-insurer communication
+CUSTOMER MESSAGE:
+Thank you for considering it. The remaining benefit I'd highlight is that {{drp}} works directly with our claims team when repair details need to be discussed. If you still prefer {{non-drp}}, that's completely your decision. Which would you like to proceed with?
+
+NOTE 025: Second hesitation | rental is relevant and not yet discussed
+CUSTOMER MESSAGE:
+One last detail that may matter is rental coordination: if your claim has applicable rental coverage, {{drp}} can help coordinate the timing around your repair appointment, subject to your policy limits. Would that make this option more useful, or would you prefer {{non-drp}}?
+
+NOTE 026: Second hesitation | customer worries about future repair issues
+CUSTOMER MESSAGE:
+I understand. The last benefit I'd mention is the lifetime repair warranty through {{drp}} while you own the vehicle and remain insured with TD Insurance. With {{non-drp}}, any repair warranty is provided by that shop instead. Which option would you like?
+
+NOTE 027: Second no | clear firm preference for non-preferred shop
+CUSTOMER MESSAGE:
+Thank you for confirming. We can proceed with {{non-drp}}. With this non-preferred facility, its own repair warranty applies, you'll coordinate repair appointments and updates directly with the shop, and any additional damage must be submitted for appraisal review before extra repair work proceeds.
+
+NOTE 028: Customer explicitly says not to offer DRP again
+CUSTOMER MESSAGE:
+Understood, and thank you for being clear. We'll proceed with {{non-drp}}. I'll respect your choice and focus on the repair arrangements for that facility.
+
+NOTE 029: Customer is annoyed by follow-up suggestions
+CUSTOMER MESSAGE:
+I understand, and I'm sorry for repeating the recommendation. We'll move forward with {{non-drp}} and the steps needed for that repair option.
+
+NOTE 030: Customer confirms they are not interested in changing shops
+CUSTOMER MESSAGE:
+Absolutely. We'll proceed with {{non-drp}}. The shop will provide any repair warranty, and additional damage must be reviewed by the assigned appraiser before related extra repairs are completed.
+
+
+========================================================================================
+04 | CUSTOMER HAS A NON-PREFERRED SHOP ALREADY
+========================================================================================
+
+NOTE 031: Customer names non-preferred facility | acknowledge and make first alternative offer
+CUSTOMER MESSAGE:
+Absolutely, {{non-drp}} is an option. Before we finalize your selection, I can also recommend {{drp}} at {{drp_adr}}. It's part of our TD Insurance Preferred Repair Network, so the shop coordinates repair details directly with us. Would you be open to considering it?
+
+NOTE 032: Customer already booked {{non-drp}} | offer without dismissing booking
+CUSTOMER MESSAGE:
+I understand you've already booked with {{non-drp}}. Before you commit, I'd like to mention {{drp}}, located at {{drp_adr}}. As a preferred facility, it works directly with TD Insurance on repair coordination. Would you like to compare that option before proceeding?
+
+NOTE 033: Customer has used {{non-drp}} for years | respect relationship and offer warranty next
+CUSTOMER MESSAGE:
+It's good that you already have a relationship with {{non-drp}}. One advantage worth considering with {{drp}} is the preferred-network lifetime repair warranty, which applies while you own the vehicle and remain insured with TD Insurance. Would you be open to that option?
+
+NOTE 034: Customer says {{non-drp}} knows their vehicle | emphasize distinct claims coordination
+CUSTOMER MESSAGE:
+I understand why you're comfortable with {{non-drp}}. One difference with {{drp}} is that the shop communicates directly with TD Insurance about the repair process, which may mean less back-and-forth for you. Would you like to consider {{drp}} instead?
+
+NOTE 035: Customer says {{non-drp}} is closer | acknowledge genuine convenience
+CUSTOMER MESSAGE:
+That makes sense; travel distance is an important consideration. {{drp}} is located at {{drp_adr}}, and I wouldn't want to recommend an inconvenient facility. If {{non-drp}} works better for your location, we can proceed with it.
+
+NOTE 036: Customer says they were referred to {{non-drp}} by family | respectful alternative
+CUSTOMER MESSAGE:
+I understand that a personal recommendation carries weight. If you're comparing choices, {{drp}} at {{drp_adr}} offers direct coordination with TD Insurance, which can simplify parts of the claims process. Would you like to consider it before deciding?
+
+NOTE 037: Customer says vehicle is already at {{non-drp}} | no unsupported towing promises
+CUSTOMER MESSAGE:
+Thank you for letting me know your vehicle is already with {{non-drp}}. You do not have to switch facilities just because we're discussing our preferred network. {{drp}} at {{drp_adr}} is another option, but moving the vehicle would require reviewing the practical arrangements first. Would you prefer to stay with {{non-drp}}?
+
+NOTE 038: Customer asks whether {{non-drp}} is allowed
+CUSTOMER MESSAGE:
+Yes, the choice of repair facility is yours. You may select {{non-drp}}. We also recommend {{drp}} at {{drp_adr}} because it works directly with TD Insurance on repair coordination. Which option would you prefer?
+
+NOTE 039: Customer asks why preferred shop is recommended when they already chose {{non-drp}}
+CUSTOMER MESSAGE:
+I'm recommending {{drp}} because it's in our preferred repair network and offers direct coordination with TD Insurance, along with additional warranty support. It's a recommendation, not a requirement, and we can proceed with {{non-drp}} if that's your preference.
+
+NOTE 040: Customer asks about non-preferred repair warranty
+CUSTOMER MESSAGE:
+If you proceed with {{non-drp}}, any repair warranty comes directly from that shop. TD Insurance's preferred-network lifetime repair warranty would not apply. You can confirm the warranty terms with {{non-drp}} before authorizing repairs.
+
+NOTE 041: Customer asks about non-preferred rental responsibility
+CUSTOMER MESSAGE:
+If rental coverage applies and you use {{non-drp}}, you'll need to coordinate the repair dates with the shop and arrange the rental timing with the rental provider. Rental eligibility, limits and approved repair time still apply, so delays beyond the approved period may require review.
+
+NOTE 042: Customer asks about non-preferred additional damage approvals
+CUSTOMER MESSAGE:
+If {{non-drp}} identifies further damage, the shop should send supporting details to the assigned appraiser for review before carrying out the additional repairs. Any related adjustment to the approved settlement depends on that review.
+
+NOTE 043: Customer asks what happens to payment at a non-preferred shop
+CUSTOMER MESSAGE:
+With {{non-drp}}, the payment approach depends on the approved claim arrangement. Eligible repairs may proceed through a cash settlement based on the approved estimate, and the applicable cheque arrangement may involve a co-payee. Your Claims Advisor can clarify the payment path for this claim.
+
+NOTE 044: Customer chooses {{non-drp}} | complete concise explanation and decision confirmation
+CUSTOMER MESSAGE:
+Certainly. We can proceed with {{non-drp}}. Its own warranty applies rather than the TD Insurance preferred-network warranty. You'll arrange repair dates and updates directly with the shop. Any further damage needs appraiser review before extra work starts, and rental coordination remains subject to your coverage and the approved repair period. Would you like to confirm {{non-drp}} as your selected facility?
+
+NOTE 045: Customer chooses {{non-drp}} | no rental needed
+CUSTOMER MESSAGE:
+Understood. We'll proceed with {{non-drp}}. Any repair warranty comes from that shop, and you'll coordinate repair timing and progress with them. If additional damage is discovered, the shop must provide details for the appraiser's review before related extra repairs are completed.
+
+NOTE 046: Customer chooses {{non-drp}} | only a short acknowledgement is appropriate
+CUSTOMER MESSAGE:
+Thank you for confirming {{non-drp}}. We'll use that as your selected repair facility. Any warranty on its work will be provided by the shop, and any additional repair work must be reviewed by the assigned appraiser.
+
+NOTE 047: Customer insists on non-DRP after hearing benefits
+CUSTOMER MESSAGE:
+Of course. I respect your decision to use {{non-drp}}. You'll coordinate the appointments and repair updates directly with the facility, and it will provide its own warranty. If anything additional is found during repairs, the appraiser must review the supporting information before the extra work proceeds.
+
+
+========================================================================================
+05 | TD INSURANCE AUTO CENTRE — DISTINCT PATHWAY
+========================================================================================
+
+NOTE 048: Auto Centre first offer | when {{drp}} is confirmed as an Auto Centre
+CUSTOMER MESSAGE:
+Based on your location, I'd recommend the TD Insurance Auto Centre {{drp}}, located at {{drp_adr}}. It has TD Insurance staff onsite to help coordinate the appraisal and repair process. Would you like to proceed with this Auto Centre?
+
+NOTE 049: Auto Centre short first offer | onsite coordination
+CUSTOMER MESSAGE:
+A convenient option may be {{drp}} at {{drp_adr}}. As a TD Insurance Auto Centre, it offers onsite TD support for appraisal and repair coordination. Would this work for you?
+
+NOTE 050: Auto Centre first no | introduce lifetime warranty
+CUSTOMER MESSAGE:
+Of course. Another benefit of using {{drp}} is that repairs include a lifetime warranty while you own the vehicle and remain insured with TD Insurance. Would that make the Auto Centre worth considering?
+
+NOTE 051: Auto Centre still hesitant | introduce rental only when applicable
+CUSTOMER MESSAGE:
+One more benefit, if you have applicable rental coverage, is that {{drp}} can help arrange a rental vehicle around your repair appointment. The rental remains subject to the coverage and limits of your policy. Would you like to consider that option?
+
+NOTE 052: Customer rejects Auto Centre but is open to another preferred facility
+CUSTOMER MESSAGE:
+Absolutely. You don't have to use an Auto Centre. We can consider another TD Insurance Preferred Repair Shop that may be a better fit for you, while still providing direct repair coordination and the preferred-network lifetime warranty.
+
+NOTE 053: Customer asks what onsite TD staff actually do
+CUSTOMER MESSAGE:
+At the TD Insurance Auto Centre, onsite TD Insurance staff help coordinate the appraisal and repair experience. The goal is to simplify the process and reduce the separate arrangements you need to manage.
+
+NOTE 054: Customer asks if an ordinary DRP facility has onsite TD staff
+CUSTOMER MESSAGE:
+Not necessarily. Onsite TD Insurance support is a feature of the TD Insurance Auto Centre. Other preferred repair shops work directly with TD Insurance on repair coordination, but they don't all have TD staff onsite.
+
+NOTE 055: Customer wants Auto Centre rental
+CUSTOMER MESSAGE:
+If your claim includes applicable rental coverage, {{drp}} can help arrange the rental around your repair appointment. We'll still need to follow the policy's coverage, limits and applicable repair timing.
+
+
+========================================================================================
+06 | RENTALS — COVERAGE AND TIMING
+========================================================================================
+
+NOTE 056: Customer needs a rental | recommend shop with specific location
+CUSTOMER MESSAGE:
+Since you may need a rental, I'd recommend {{drp}} at {{drp_adr}}. With a preferred facility, rental timing can be coordinated around your repair appointment if rental coverage applies. Would this location be convenient?
+
+NOTE 057: Customer asks if rental is included simply by choosing DRP
+CUSTOMER MESSAGE:
+Choosing {{drp}} doesn't automatically create rental coverage. If your policy includes applicable rental coverage, arrangements can be coordinated around the repair appointment, subject to your coverage limits and the approved repair timeline.
+
+NOTE 058: Customer asks whether rental is free
+CUSTOMER MESSAGE:
+Rental costs are subject to the coverage and limits that apply to your claim. Choosing {{drp}} may make the rental arrangements easier to coordinate, but it doesn't guarantee a no-cost or unlimited rental.
+
+NOTE 059: Customer asks if DRP guarantees a rental right away
+CUSTOMER MESSAGE:
+I can't guarantee an immediate rental. If rental coverage applies, {{drp}} can help coordinate arrangements around your repair appointment, depending on coverage and availability.
+
+NOTE 060: Customer needs the car for work | benefit-focused offer
+CUSTOMER MESSAGE:
+I understand how important reliable transportation is for work. I'd recommend {{drp}} at {{drp_adr}} because, if rental coverage applies, repair and rental timing can be coordinated together. Would you like to consider this facility?
+
+NOTE 061: Customer says rental is more important than the repair shop
+CUSTOMER MESSAGE:
+That makes sense. With {{drp}}, rental coordination can be tied to the repair appointment if your policy includes the coverage. Rental eligibility, limits and the approved repair timeline still apply. Would you like to use this preferred option?
+
+NOTE 062: Customer chooses non-DRP and asks how to arrange rental
+CUSTOMER MESSAGE:
+With {{non-drp}}, you'll need to confirm repair start and completion dates directly with the shop, and coordinate your rental with the rental provider if coverage applies. Rental payments remain subject to the approved repair period and policy limits; additional delays may need to be reviewed.
+
+NOTE 063: Customer asks why non-DRP rental delays matter
+CUSTOMER MESSAGE:
+With {{non-drp}}, rental allowances are tied to the approved repair time and applicable coverage. If repairs take longer than the approved period, the additional rental days aren't automatically covered, so the delay and related costs would need to be reviewed.
+
+NOTE 064: Customer asks whether insurer pays every rental day at non-DRP
+CUSTOMER MESSAGE:
+Not necessarily. Rental payment depends on the coverage, limits and approved repair time. For {{non-drp}}, the approved labour hours and related repair timing are relevant, and extra days caused by delays may need separate review.
+
+NOTE 065: Customer asks whether DRP removes rental limits
+CUSTOMER MESSAGE:
+No. Selecting {{drp}} doesn't remove your policy's rental limits or guarantee that every day of a rental will be covered. The main benefit is coordinated arrangements when coverage applies.
+
+NOTE 066: Customer says they do not need rental | avoid irrelevant selling point
+CUSTOMER MESSAGE:
+Understood. In that case, a different benefit of {{drp}} is its lifetime repair warranty while you own the vehicle and remain insured with TD Insurance. Would you like to consider the shop for that reason?
+
+
+========================================================================================
+07 | WARRANTY AND REPAIR QUALITY QUESTIONS
+========================================================================================
+
+NOTE 067: Customer asks what the DRP lifetime warranty means
+CUSTOMER MESSAGE:
+Repairs completed through our preferred repair network include a lifetime repair warranty while you own the vehicle and remain insured with TD Insurance. It's intended to provide reassurance about the repair work completed through that pathway.
+
+NOTE 068: Customer asks how long DRP warranty lasts
+CUSTOMER MESSAGE:
+The preferred-network repair warranty applies for as long as you own the vehicle and remain insured with TD Insurance.
+
+NOTE 069: Customer asks whether DRP warranty continues after selling vehicle
+CUSTOMER MESSAGE:
+The preferred-network lifetime repair warranty is tied to your continued ownership of the vehicle and remaining insured with TD Insurance. It would not continue on the same terms after you sell the vehicle.
+
+NOTE 070: Customer asks whether warranty continues if they leave TD
+CUSTOMER MESSAGE:
+The preferred-network warranty is described as applying while you own the vehicle and remain insured with TD Insurance. If you no longer meet those conditions, that preferred-network lifetime warranty would not continue on the same terms.
+
+NOTE 071: Customer says their own shop also has a lifetime warranty
+CUSTOMER MESSAGE:
+That's helpful to know. You can certainly compare {{non-drp}}'s warranty terms with the TD Insurance preferred-network warranty through {{drp}}. The important difference is who provides the warranty and what conditions apply. You're welcome to select either facility.
+
+NOTE 072: Customer asks if non-DRP repairs have no warranty
+CUSTOMER MESSAGE:
+Not necessarily. {{non-drp}} may offer its own repair warranty, but TD Insurance's preferred-network lifetime repair warranty would not apply there. You'll need to confirm the terms directly with {{non-drp}}.
+
+NOTE 073: Customer asks whether all DRP work is guaranteed regardless of cause
+CUSTOMER MESSAGE:
+The preferred repair pathway includes a lifetime repair warranty while you own the vehicle and remain insured with TD Insurance. The specific concern would still need to be reviewed to determine whether it's covered under the repair warranty; I wouldn't want to promise coverage for every future issue.
+
+NOTE 074: Customer asks if preferred shop repairs are always better quality
+CUSTOMER MESSAGE:
+Our preferred facilities meet TD Insurance repair standards and work closely with us during the repair process. That doesn't mean every non-preferred shop does poor work. The key added benefits are the preferred-network warranty and direct coordination with TD Insurance.
+
+NOTE 075: Customer worries the recommended shop will cut corners
+CUSTOMER MESSAGE:
+I understand why repair quality matters so much. {{drp}} is part of our preferred network and is expected to meet TD Insurance repair standards. Repairs also come with the preferred-network lifetime warranty while you own the vehicle and remain insured with TD Insurance.
+
+NOTE 076: Customer read negative reviews about {{drp}}
+CUSTOMER MESSAGE:
+Thank you for mentioning that. I understand why the reviews give you pause. You aren't required to use {{drp}}. We can consider another preferred facility if one is practical, or proceed with {{non-drp}} if that's your choice.
+
+NOTE 077: Customer wants to inspect the shop before choosing
+CUSTOMER MESSAGE:
+Of course. It's reasonable to want to feel comfortable with the facility repairing your vehicle. {{drp}} is located at {{drp_adr}}. You're welcome to review the location and decide whether it meets your needs before selecting it.
+
+
+========================================================================================
+08 | PAYMENT, DEDUCTIBLE AND CASH SETTLEMENT
+========================================================================================
+
+NOTE 078: Customer asks who pays preferred shop
+CUSTOMER MESSAGE:
+For approved repairs completed through {{drp}}, TD Insurance issues payment directly to the preferred repair facility. Any applicable deductible or other customer responsibility is handled according to the claim.
+
+NOTE 079: Customer asks whether preferred repair means no deductible
+CUSTOMER MESSAGE:
+No. Choosing {{drp}} doesn't automatically waive a deductible. If a deductible applies to your claim, it still applies under the relevant coverage. The preferred facility helps simplify approved repair payment and coordination.
+
+NOTE 080: Customer worries about paying repair amount upfront
+CUSTOMER MESSAGE:
+One convenience of {{drp}} is that TD Insurance issues payment directly to the shop for approved repairs. That can reduce the need for you to handle the insurer-to-shop payment arrangements. Any applicable deductible or other customer responsibility would still need to be addressed.
+
+NOTE 081: Customer asks whether non-DRP shop is paid directly
+CUSTOMER MESSAGE:
+The payment process for {{non-drp}} depends on the approved settlement arrangement. It may involve a cash settlement based on the approved estimate or a co-payable cheque. Your Claims Advisor can confirm which payment method applies to your claim.
+
+NOTE 082: Customer asks for cash instead of repair
+CUSTOMER MESSAGE:
+A cash settlement may be available for eligible repairs, based on the approved estimate and your claim circumstances. If you're considering not completing repairs, there may also be policy considerations, so the Advice Centre should explain any potential policy impact before you decide.
+
+NOTE 083: Customer wants cash settlement and still asks about warranty
+CUSTOMER MESSAGE:
+The preferred-network lifetime repair warranty relates to repairs completed through the preferred pathway. A cash settlement by itself doesn't provide that repair warranty. If you use {{non-drp}}, any warranty on its work would come from that shop.
+
+NOTE 084: Customer asks whether taking cash affects policy
+CUSTOMER MESSAGE:
+There may be policy considerations if you take a cash settlement and don't complete the repairs. Before you make that decision, the TD Insurance Advice Centre can explain any potential impact on your policy.
+
+NOTE 085: Customer asks whether preferred shop is mandatory to receive repair funds
+CUSTOMER MESSAGE:
+No, you may choose {{non-drp}} instead of {{drp}}. The claims payment arrangement may differ depending on the repair path and approved estimate, but your choice of repair facility remains yours.
+
+NOTE 086: Customer asks if the insurer covers every invoice at non-DRP
+CUSTOMER MESSAGE:
+Repair payment depends on the approved estimate and any authorized supplements. If {{non-drp}} proposes additional work or costs, the supporting information should be submitted for appraiser review before that extra work proceeds. Not every additional amount is automatically approved.
+
+NOTE 087: Customer asks whether a preferred shop handles deductible for them
+CUSTOMER MESSAGE:
+Selecting {{drp}} doesn't eliminate any deductible that applies. TD Insurance pays the preferred facility directly for approved repairs, while your deductible or other customer responsibility is handled under the applicable claim arrangements.
+
+
+========================================================================================
+09 | EXTRA DAMAGE, APPRAISAL AND SUPPLEMENTS
+========================================================================================
+
+NOTE 088: Customer asks what happens if more damage is found at DRP
+CUSTOMER MESSAGE:
+If {{drp}} identifies damage that wasn't included in the original appraisal, the additional information must be reviewed before related extra repairs are approved. Because the shop works directly with TD Insurance, it can help coordinate that communication.
+
+NOTE 089: Customer asks what happens if more damage is found at non-DRP
+CUSTOMER MESSAGE:
+If {{non-drp}} finds additional damage, the shop needs to send supporting information to the assigned appraiser for review. The extra repairs should not proceed until the required approval is provided, and the settlement may be adjusted if the added damage is confirmed.
+
+NOTE 090: Customer asks whether a supplement is automatically approved at preferred shop
+CUSTOMER MESSAGE:
+No. A preferred facility can communicate directly with TD Insurance, but additional repairs still require the applicable appraisal and approval. The preferred process helps with coordination; it doesn't bypass review.
+
+NOTE 091: Customer asks why non-DRP must wait before extra work
+CUSTOMER MESSAGE:
+The assigned appraiser needs to review the additional damage and supporting information to determine what should be approved. If {{non-drp}} proceeds before the required approval, those extra costs may not be included in the approved settlement.
+
+NOTE 092: Customer says non-DRP shop already started extra repairs
+CUSTOMER MESSAGE:
+Thank you for letting me know. The additional work and charges will need to be reviewed against the approved estimate and any required appraisal approval. Please ask {{non-drp}} to provide the supporting repair information to the assigned appraiser as soon as possible.
+
+NOTE 093: Customer says shop found hidden damage | anxious about costs
+CUSTOMER MESSAGE:
+I understand that unexpected damage is concerning. The shop should provide the details and supporting information to the appraiser so the additional damage can be reviewed before further work is approved. We shouldn't assume the extra amount is covered until that review is completed.
+
+NOTE 094: Customer asks if DRP guarantees every hidden damage item will be paid
+CUSTOMER MESSAGE:
+No. Any newly identified damage still needs to be reviewed and approved as appropriate. The benefit of {{drp}} is its direct communication with TD Insurance throughout that process, not automatic approval of every repair item.
+
+NOTE 095: Customer asks whether appraisal can happen at preferred facility
+CUSTOMER MESSAGE:
+The preferred repair pathway is designed to coordinate the appraisal and repair process. The exact appraisal arrangements depend on the facility and your claim. {{drp}} works directly with TD Insurance to help coordinate the necessary steps.
+
+
+========================================================================================
+10 | CONTROL, CHOICE, TRUST AND PUSHBACK
+========================================================================================
+
+NOTE 096: Customer asks if they must use TD shop
+CUSTOMER MESSAGE:
+No, you can choose the repair facility that works best for you. I recommend {{drp}} at {{drp_adr}} because it works directly with TD Insurance on repairs, but you're also free to proceed with {{non-drp}}.
+
+NOTE 097: Customer says TD is forcing them to use DRP
+CUSTOMER MESSAGE:
+I'm sorry if my recommendation came across that way. You're not required to select {{drp}}. I recommend it because of the preferred-network coordination and benefits, but the final choice is entirely yours.
+
+NOTE 098: Customer asks why TD recommends its network
+CUSTOMER MESSAGE:
+We recommend {{drp}} because it's part of our preferred repair network, meets TD Insurance repair standards and works closely with us on repair coordination. The preferred pathway also includes a lifetime repair warranty while you own the vehicle and remain insured with us.
+
+NOTE 099: Customer believes TD owns every preferred shop
+CUSTOMER MESSAGE:
+Not every preferred repair shop is a TD Insurance Auto Centre. A TD Insurance Auto Centre has onsite TD staff to help coordinate appraisal and repairs, whereas other preferred network facilities work directly with TD Insurance without necessarily having onsite TD staff.
+
+NOTE 100: Customer asks whether Fix Auto can be DRP
+CUSTOMER MESSAGE:
+A specific Fix Auto location may be a preferred repair facility, but that would need to be confirmed for the location you're considering. We shouldn't assume every location is part of the TD Insurance Preferred Repair Network.
+
+NOTE 101: Customer says they refuse insurer-affiliated shops
+CUSTOMER MESSAGE:
+I respect that. You may choose {{non-drp}}. I wanted to make sure you knew the preferred option was available, but I won't pressure you to use {{drp}}.
+
+NOTE 102: Customer says preferred shop is too far away
+CUSTOMER MESSAGE:
+That's completely understandable. {{drp}} is located at {{drp_adr}}, and convenience matters. If it isn't practical for you, we can consider another preferred facility if available, or proceed with {{non-drp}}.
+
+NOTE 103: Customer asks if preferred shop will finish faster
+CUSTOMER MESSAGE:
+I can't promise a faster repair time simply because a shop is preferred. The advantage of {{drp}} is its established coordination with TD Insurance and the preferred-network warranty. Repair timing depends on the damage, parts and the facility's schedule.
+
+NOTE 104: Customer asks if they can change their mind
+CUSTOMER MESSAGE:
+You can discuss changing your repair-facility selection, but the available options may depend on where the vehicle is, the appraisal status and whether repairs have started. We can review the practical arrangements before making a change.
+
+NOTE 105: Customer refuses to discuss repair options further
+CUSTOMER MESSAGE:
+Understood. I respect your decision. We can proceed with {{non-drp}} and focus on the remaining claim details.
+
+
+========================================================================================
+11 | REALISTIC FOLLOW-UPS FOR COMMON CUSTOMER REPLIES
+========================================================================================
+
+NOTE 106: Customer: “Why that one?”
+CUSTOMER MESSAGE:
+I recommended {{drp}} because it's a TD Insurance Preferred Repair Shop at {{drp_adr}}. The facility works directly with our claims team on repairs and communication, which may make the process easier to manage.
+
+NOTE 107: Customer: “What else do I get?” | after coordination was discussed
+CUSTOMER MESSAGE:
+Another important benefit is the lifetime repair warranty through {{drp}}, which applies while you own the vehicle and remain insured with TD Insurance.
+
+NOTE 108: Customer: “Anything else?” | after coordination and warranty
+CUSTOMER MESSAGE:
+Yes. For approved repairs at {{drp}}, TD Insurance issues payment directly to the facility, so you don't need to coordinate that insurance payment yourself.
+
+NOTE 109: Customer: “And what about rental?” | conditional
+CUSTOMER MESSAGE:
+If your policy includes applicable rental coverage, {{drp}} can help coordinate a rental around your repair appointment. The coverage, limits and approved repair timeline still apply.
+
+NOTE 110: Customer: “I'll think about it.”
+CUSTOMER MESSAGE:
+Of course. {{drp}} is located at {{drp_adr}}, and the final decision is yours. Would you like to leave that preferred option under consideration while we review the remaining claim details?
+
+NOTE 111: Customer: “Maybe if it's close.”
+CUSTOMER MESSAGE:
+The recommended preferred facility is {{drp}}, located at {{drp_adr}}. Does that address work for you, or would {{non-drp}} be more convenient?
+
+NOTE 112: Customer: “I just want my car fixed.”
+CUSTOMER MESSAGE:
+I understand. That's why I'm recommending {{drp}} at {{drp_adr}}: it works directly with TD Insurance to coordinate the repair process. Would you like to proceed there?
+
+NOTE 113: Customer: “I don't care about the warranty.” | switch benefit
+CUSTOMER MESSAGE:
+Understood. Another advantage of {{drp}} is that it coordinates repair information directly with TD Insurance, which can mean less follow-up between you, the repair facility and the claims team.
+
+NOTE 114: Customer: “I can handle the calls myself.” | switch benefit
+CUSTOMER MESSAGE:
+Of course. One other advantage of {{drp}} is that repairs are backed by the preferred-network lifetime warranty while you own the vehicle and remain insured with TD Insurance. Would that be relevant to your decision?
+
+NOTE 115: Customer: “I already have a warranty.” | switch benefit
+CUSTOMER MESSAGE:
+That makes sense. Another reason to consider {{drp}} is that TD Insurance pays the preferred shop directly for approved repairs and coordinates repair information with the facility.
+
+NOTE 116: Customer: “How is DRP actually easier?”
+CUSTOMER MESSAGE:
+With {{drp}}, the shop works directly with TD Insurance on repair communication, and payment for approved repairs goes directly to the shop. If rental coverage applies, rental timing may also be coordinated around the repair appointment.
+
+NOTE 117: Customer: “So non-DRP is a bad choice?”
+CUSTOMER MESSAGE:
+Not at all. {{non-drp}} may be the right fit for you. The difference is that TD Insurance's preferred-network lifetime warranty does not apply there, and you'll generally coordinate more of the repair arrangements directly with that shop.
+
+NOTE 118: Customer: “Does it cost more to choose my own shop?”
+CUSTOMER MESSAGE:
+Choosing {{non-drp}} doesn't, by itself, establish what your out-of-pocket cost will be. Payment depends on the approved estimate, applicable deductible, and any work or charges that aren't approved. Your Claims Advisor can confirm the arrangement for this claim.
+
+NOTE 119: Customer: “I want to know the repair date first.”
+CUSTOMER MESSAGE:
+That's understandable. The actual appointment and repair schedule need to be confirmed with the facility. {{drp}} is located at {{drp_adr}}; we shouldn't promise a start or completion date before it's confirmed.
+
+NOTE 120: Customer: “Can you promise they will use original parts?”
+CUSTOMER MESSAGE:
+I wouldn't want to promise a specific parts decision without reviewing the approved repair plan. The repair and parts arrangements must follow the applicable appraisal and claim requirements, regardless of which shop you choose.
+
+NOTE 121: Customer: “Will you pay for a rental if parts are delayed?”
+CUSTOMER MESSAGE:
+Rental coverage and payment depend on the policy limits and approved repair period. A parts delay doesn't automatically mean additional rental days will be covered, so any extension would need to be reviewed.
+
+NOTE 122: Customer: “I've already paid my shop a deposit.”
+CUSTOMER MESSAGE:
+Thank you for telling me. Before changing facilities, you'd want to review any deposit or cancellation terms directly with {{non-drp}}. You may still consider {{drp}}, but I wouldn't recommend assuming your deposit can be recovered.
+
+NOTE 123: Customer: “Can the preferred shop pick up my car?”
+CUSTOMER MESSAGE:
+Pickup or vehicle transport would need to be confirmed with {{drp}} and the arrangements available for your claim. I wouldn't want to promise that service without checking.
+
+NOTE 124: Customer: “Can I visit the shop first?”
+CUSTOMER MESSAGE:
+Yes, you're welcome to review the facility before deciding. {{drp}} is located at {{drp_adr}}. You can assess whether it's convenient and right for you before confirming your selection.
+
+NOTE 125: Customer: “Can I use another preferred shop instead?”
+CUSTOMER MESSAGE:
+Absolutely. You're not limited to {{drp}} if another preferred facility is more suitable. We can consider the available preferred options based on your location and claim needs.
+
+NOTE 126: Customer: “Do you get a commission if I choose this?” | no unsupported personal compensation claims
+CUSTOMER MESSAGE:
+I'm recommending {{drp}} because of the repair coordination and preferred-network benefits associated with it. The choice remains entirely yours, and I'm happy to help with the option that works best for you.
+
+
+========================================================================================
+12 | DECISION CONFIRMATIONS AND HANDOFF LANGUAGE
+========================================================================================
+
+NOTE 127: Customer accepts {{drp}} | short confirmation
+CUSTOMER MESSAGE:
+Thank you. We'll proceed with {{drp}}, located at {{drp_adr}}, as your selected TD Insurance Preferred Repair Shop. The next repair and appraisal arrangements will follow the process applicable to your claim.
+
+NOTE 128: Customer accepts {{drp}} | rental mentioned but not confirmed
+CUSTOMER MESSAGE:
+Thank you for choosing {{drp}} at {{drp_adr}}. We'll proceed with that preferred repair facility. If rental coverage applies, the rental timing can be coordinated around the repair appointment, subject to your policy limits.
+
+NOTE 129: Customer accepts {{drp}} | reiterate one benefit only
+CUSTOMER MESSAGE:
+Excellent. We'll record {{drp}} at {{drp_adr}} as your selected preferred facility. The shop works directly with TD Insurance on repair coordination.
+
+NOTE 130: Customer accepts {{non-drp}} | complete information with no dangling “I'll explain”
+CUSTOMER MESSAGE:
+Thank you for confirming {{non-drp}}. Since it's a non-preferred repair facility, its own repair warranty applies, and you'll arrange repair dates and updates directly with the shop. If additional damage is found, the supporting details must be reviewed by the assigned appraiser before extra work proceeds. Rental arrangements, if covered, remain subject to your policy limits and the approved repair timeline.
+
+NOTE 131: Customer accepts {{non-drp}} | short complete version
+CUSTOMER MESSAGE:
+Understood. We'll proceed with {{non-drp}}. Its repair warranty is provided by the shop, you'll coordinate your appointments directly with them, and any additional damage requires appraiser review before extra repairs go ahead.
+
+NOTE 132: Customer asks for a recap comparing the two options
+CUSTOMER MESSAGE:
+To summarize: {{drp}}, at {{drp_adr}}, is a TD Insurance Preferred Repair Shop offering direct repair coordination, direct payment for approved repairs and a lifetime repair warranty while you own the vehicle and remain insured with TD Insurance. With {{non-drp}}, you manage more of the repair coordination directly, and the shop provides its own warranty. Your choice is entirely yours.
+
+NOTE 133: Customer changes decision from non-DRP to preferred
+CUSTOMER MESSAGE:
+Certainly. We can review changing your selection to {{drp}}, located at {{drp_adr}}. Any existing bookings, appraisal arrangements or work already started with {{non-drp}} would need to be considered before the change is finalized.
+
+NOTE 134: Customer changes decision from preferred to non-DRP
+CUSTOMER MESSAGE:
+Understood. We can review changing your selection from {{drp}} to {{non-drp}}. Any existing appraisal or repair arrangements would need to be considered, and the warranty and coordination responsibilities would follow the non-preferred repair pathway.
+
+NOTE 135: Customer does not wish to make shop decision yet
+CUSTOMER MESSAGE:
+That's fine. You don't need to choose simply because I've recommended {{drp}} at {{drp_adr}}. We can leave the repair-facility decision open while you consider which option works best for you.
+
+NOTE 136: Customer requests advisor discussion before choosing
+CUSTOMER MESSAGE:
+Of course. Your Claims Advisor can review the repair arrangements with you. The option I've recommended is {{drp}} at {{drp_adr}}, but you can also consider {{non-drp}} and make the choice that works best for you.
+
+NOTE 137: Customer asks if choosing DRP guarantees claim payment
+CUSTOMER MESSAGE:
+Selecting {{drp}} doesn't guarantee that all repairs or expenses will be covered. Any payment remains subject to your coverage, appraisal and required approvals. The preferred shop's advantage is its direct coordination with TD Insurance.
+
+
+========================================================================================
+13 | ADDITIONAL FAQ — CUSTOMER-FACING ANSWERS
+========================================================================================
+
+NOTE 138: FAQ | What is DRP?
+CUSTOMER MESSAGE:
+DRP refers to our preferred repair network. Shops such as {{drp}} work directly with TD Insurance on repair communication and coordination and offer the preferred-network lifetime repair warranty while you own the vehicle and remain insured with us.
+
+NOTE 139: FAQ | Is the TD Auto Centre the same as DRP?
+CUSTOMER MESSAGE:
+A TD Insurance Auto Centre is a distinct preferred pathway with onsite TD staff who help coordinate appraisal and repairs. Other preferred network facilities also work closely with us, but don't necessarily provide onsite TD staff.
+
+NOTE 140: FAQ | Can I choose my own repairer?
+CUSTOMER MESSAGE:
+Yes. You can select {{non-drp}} rather than {{drp}}. The choice is entirely yours, and we can explain the warranty, coordination and payment differences so you can decide.
+
+NOTE 141: FAQ | What is the biggest advantage of DRP?
+CUSTOMER MESSAGE:
+One major advantage is that {{drp}} works directly with TD Insurance during the repair process, which can reduce the communication and coordination you need to handle yourself.
+
+NOTE 142: FAQ | Are repairs backed by a lifetime warranty?
+CUSTOMER MESSAGE:
+Repairs through the TD Insurance preferred network include a lifetime repair warranty while you own the vehicle and remain insured with TD Insurance.
+
+NOTE 143: FAQ | Do I have to pay the preferred shop?
+CUSTOMER MESSAGE:
+TD Insurance issues payment directly to {{drp}} for approved repairs. Any applicable deductible or other customer responsibility still needs to be handled under your claim arrangements.
+
+NOTE 144: FAQ | Is rental coverage automatic?
+CUSTOMER MESSAGE:
+No. Rental coverage depends on your policy and claim. If applicable, {{drp}} can help coordinate timing around the repair appointment, subject to coverage limits and approved repair time.
+
+NOTE 145: FAQ | What if I do not repair the vehicle?
+CUSTOMER MESSAGE:
+If you are considering a cash settlement without completing repairs, there may be policy considerations. The TD Insurance Advice Centre can explain any potential policy impact before you make that decision.
+
+NOTE 146: FAQ | What if the estimate changes?
+CUSTOMER MESSAGE:
+If new damage or additional repair costs are identified, the supporting information needs to be reviewed by the assigned appraiser. The approved settlement can be reconsidered if related damage is confirmed.
+
+NOTE 147: FAQ | Are all non-preferred shops excluded from the warranty?
+CUSTOMER MESSAGE:
+TD Insurance's preferred-network lifetime repair warranty doesn't apply to {{non-drp}}. That doesn't necessarily mean the shop offers no warranty; any warranty would come directly from {{non-drp}}.
+
+NOTE 148: FAQ | Can my chosen shop submit extra damage?
+CUSTOMER MESSAGE:
+Yes. {{non-drp}} can submit supporting information about additional damage to the assigned appraiser. The additional work needs review and any required approval before it proceeds.
+
+NOTE 149: FAQ | Will rental cover delays at non-preferred shop?
+CUSTOMER MESSAGE:
+Not automatically. With {{non-drp}}, rental payment is connected to coverage and the approved repair time. Additional delays and rental costs may need separate review, and some costs may remain your responsibility.
+
+NOTE 150: FAQ | What if I don't have rental coverage?
+CUSTOMER MESSAGE:
+If your policy doesn't include applicable rental coverage, using {{drp}} doesn't create that coverage. The shop's other benefits, such as direct repair coordination and the preferred-network warranty, may still be useful.
+
+NOTE 151: FAQ | Who manages appointments with my own shop?
+CUSTOMER MESSAGE:
+With {{non-drp}}, you'll generally arrange repair appointments, follow-up work and progress updates directly with the facility.
+
+NOTE 152: FAQ | Who handles payments at DRP?
+CUSTOMER MESSAGE:
+For approved repairs through {{drp}}, TD Insurance pays the facility directly. Any applicable deductible or other customer responsibility is handled separately under the claim.
+
+NOTE 153: FAQ | Does DRP mean the repairs are pre-approved?
+CUSTOMER MESSAGE:
+No. Repairs and any additional work still follow the relevant appraisal and approval process. The preferred-network arrangement supports coordination with TD Insurance; it doesn't replace required approvals.
+
+NOTE 154: FAQ | Can I take the settlement and decide later?
+CUSTOMER MESSAGE:
+Cash settlement eligibility and payment depend on the approved estimate and claim circumstances. If you don't intend to complete repairs, the Advice Centre should explain any potential policy impact before you make your decision.
+
+NOTE 155: FAQ | Do you recommend one option over another?
+CUSTOMER MESSAGE:
+Based on your location, I recommend {{drp}}, located at {{drp_adr}}, for the direct repair coordination and preferred-network benefits. You're still welcome to choose {{non-drp}} if that's a better fit.
+
+NOTE 156: FAQ | Can you guarantee the repair completion date?
+CUSTOMER MESSAGE:
+I can't guarantee a repair completion date. Timing depends on the facility's schedule, repair requirements and parts availability. The shop can provide updates as arrangements progress.
+
+NOTE 157: FAQ | Can I ask the body shop questions directly?
+CUSTOMER MESSAGE:
+Yes. You're welcome to discuss the repair approach, scheduling and any shop-specific warranty details directly with {{drp}} or {{non-drp}} before making your decision.
+
+
+END OF LIBRARY | 157 CUSTOMER MESSAGES
