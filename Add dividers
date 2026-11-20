@@ -1,0 +1,517 @@
+Sure! Let's go one small piece at a time, from the top of your file to the
+bottom, so you never have to jump around.
+
+Open your HTML file on your other device, press Ctrl + F to find each spot, and
+follow Steps 1 to 6 in order.
+
+Step 1: Style the Popup Box (Near the top of your file)
+
+1. Press Ctrl + F and FIND this block you added earlier:
+
+        /* Type 3: In-Between Notes Divider */
+        .editor-pane hr.div-note {
+            border-top: 1.5px dashed var(--text-subtle);
+            margin: 8px 0;
+            opacity: 0.7;
+        }
+
+2. PASTE this right underneath it:
+
+        /* Floating Quick-Jump Menu */
+        .outline-popover {
+            position: fixed;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            border-radius: 7px;
+            box-shadow: var(--shadow-md);
+            width: 320px;
+            max-height: 380px;
+            display: none;
+            flex-direction: column;
+            z-index: 650;
+            overflow: hidden;
+        }
+        .outline-popover.active { display: flex; }
+
+  - What this does: Creates the floating box that hovers over the page. display:
+    none keeps it hidden until you open it, and .active makes it appear.
+
+3. PASTE this right underneath the lines above:
+
+        .outline-header {
+            padding: 7px 10px;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            background: var(--bg-card);
+        }
+        .outline-title-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-transform: uppercase;
+        }
+        .outline-filter {
+            width: 100%;
+            background: var(--bg-input);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            border-radius: 4px;
+            padding: 5px 8px;
+            font-size: 12px;
+            outline: none;
+        }
+        .outline-filter:focus { border-color: var(--border-focus); }
+
+  - What this does: Styles the top bar and the small search box inside the popup
+    so you can type to filter your sections.
+
+4. PASTE this right underneath the lines above:
+
+        .outline-list {
+            overflow-y: auto;
+            padding: 4px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        .outline-item {
+            background: transparent;
+            border: none;
+            color: var(--text-main);
+            text-align: left;
+            padding: 6px 8px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 12px;
+            width: 100%;
+        }
+        .outline-item:hover, .outline-item.selected {
+            background: var(--td-green-subtle);
+            color: var(--td-green);
+        }
+        .outline-item.is-h1 { font-weight: 700; }
+        .outline-item.is-h2 { padding-left: 20px; font-weight: 500; }
+        .outline-item.is-note { padding-left: 28px; font-weight: 400; opacity: 0.9; }
+        .outline-badge {
+            font-size: 9.5px;
+            font-weight: 800;
+            padding: 1px 4px;
+            border-radius: 3px;
+            flex-shrink: 0;
+        }
+        .outline-badge.h1 { background: var(--td-green-subtle); color: var(--td-green); border: 1px solid var(--td-green-border); }
+        .outline-badge.h2 { background: var(--sec-bg); color: var(--sec-color); border: 1px solid var(--sec-border); }
+        .outline-badge.note { background: transparent; color: var(--text-muted); border: 1px solid var(--border); }
+        .outline-text { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .outline-empty { padding: 14px 10px; font-size: 11.5px; color: var(--text-muted); text-align: center; }
+
+  - What this does: Styles the scrollable list of sections, indents Line 2
+    slightly under Line 1, and gives each one a small color badge (green for
+    Line 1, blue for Line 2, gray — for Line 3).
+
+Step 2: Add the Popup to the Page (Middle of your file)
+
+1. Press Ctrl + F and FIND these 3 lines:
+
+        <div class="color-swatch-choice" style="background:transparent; border:1px dashed #94a3b8" onclick="applyColorChoice('')"></div>
+    </div>
+
+    <!-- AUTO VARIABLES MODAL -->
+
+2. PASTE this right between </div> and <!-- AUTO VARIABLES MODAL -->:
+
+    <!-- QUICK-JUMP OUTLINE POPUP -->
+    <div class="outline-popover" id="outlinePopover">
+        <div class="outline-header">
+            <div class="outline-title-row">
+                <span id="outlineBoxTitle">Quick Jump</span>
+                <span style="font-weight:500; text-transform:none; opacity:0.8;">Alt+G</span>
+            </div>
+            <input type="text" class="outline-filter" id="outlineFilterInput" placeholder="Type to filter (↑/↓, Enter)..." oninput="renderOutlineItems()" onkeydown="handleOutlineKeydown(event)">
+        </div>
+        <div class="outline-list" id="outlineList"></div>
+    </div>
+
+  - What this does: Adds the actual popup skeleton to your page: a title
+    (outlineBoxTitle), a search box (outlineFilterInput), and an empty list
+    (outlineList) that JavaScript will fill up with your sections.
+
+Step 3: Add the Jump & Menu Brain (JavaScript)
+
+1. Press Ctrl + F and FIND your current jumpSection block:
+
+        function jumpSection(idx, direction) {
+            const ed = editors[idx];
+            if (!ed) return;
+            setActiveBoxIndex(idx);
+            ed.focus();
+
+            const dividers = [...ed.querySelectorAll('hr.section-divider')];
+            if (!dividers.length) {
+                toast('No section dividers in this box');
+                return;
+            }
+
+            const sel = window.getSelection();
+            let currentFocusNode = sel.focusNode || ed;
+            let currentSectionIndex = 0;
+
+            for (let i = 0; i < dividers.length; i++) {
+                const div = dividers[i];
+                if (div.compareDocumentPosition(currentFocusNode) & Node.DOCUMENT_POSITION_FOLLOWING) {
+                    currentSectionIndex = i + 1;
+                }
+            }
+
+            let target = currentSectionIndex + direction;
+            if (target < 0) target = 0;
+            if (target > dividers.length) target = dividers.length;
+
+            const destNode = target === 0 ? ed.firstChild : dividers[target - 1].nextSibling;
+            if (destNode) {
+                const range = document.createRange();
+                range.selectNodeContents(destNode);
+                range.collapse(true);
+                sel.removeAllRanges();
+                sel.addRange(range);
+		if (target === 0) {
+			ed.scrollTo({ top: 0, behaviour: "smooth" });
+		} else if (dividers[target - 1]) {
+			dividers[target - 1].scrollIntoView({ behavior: "smooth", block: "nearest" });
+}
+            }
+        }
+
+2. REPLACE that entire jumpSection function with the 7 small functions below
+(paste them one after another in that same spot):
+
+Piece 3A — jumpToDivider (Scrolls cleanly to any line)
+
+        function jumpToDivider(idx, hr) {
+            const ed = editors[idx];
+            if (!ed) return;
+            setActiveBoxIndex(idx);
+            ed.focus();
+
+            if (!hr) {
+                const range = document.createRange();
+                if (ed.firstChild) {
+                    if (ed.firstChild.nodeType === 3) range.setStart(ed.firstChild, 0);
+                    else range.selectNodeContents(ed.firstChild);
+                } else {
+                    range.setStart(ed, 0);
+                }
+                range.collapse(true);
+                const sel = window.getSelection();
+                sel.removeAllRanges();
+                sel.addRange(range);
+                ed.scrollTo({ top: 0, behavior: 'smooth' });
+                return;
+            }
+
+            const range = document.createRange();
+            if (hr.nextSibling) {
+                if (hr.nextSibling.nodeType === 3) range.setStart(hr.nextSibling, 0);
+                else range.selectNodeContents(hr.nextSibling);
+                range.collapse(true);
+            } else {
+                range.setStartAfter(hr);
+                range.collapse(true);
+            }
+            const sel = window.getSelection();
+            sel.removeAllRanges();
+            sel.addRange(range);
+            hr.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+  - What this does: Moves your blinking typing cursor right below the divider
+    line you picked, and scrolls that divider straight to the top of the box
+    (block: 'start'). If hr is empty (null), it scrolls you back to the very top
+    of the box.
+
+Piece 3B — jumpSection (Upgraded Up/Down arrow jumping)
+
+        function jumpSection(idx, direction, bigLinesOnly = false) {
+            const ed = editors[idx];
+            if (!ed) return;
+            setActiveBoxIndex(idx);
+            ed.focus();
+
+            const selector = bigLinesOnly ? 'hr.div-h1, hr.div-h2' : 'hr.section-divider';
+            const dividers = [...ed.querySelectorAll(selector)];
+            if (!dividers.length) {
+                toast(bigLinesOnly ? 'No Green or Blue dividers in this box' : 'No dividers in this box');
+                return;
+            }
+
+            const sel = window.getSelection();
+            let currentFocusNode = sel.focusNode || ed;
+            let currentSectionIndex = 0;
+
+            for (let i = 0; i < dividers.length; i++) {
+                const div = dividers[i];
+                if (div.compareDocumentPosition(currentFocusNode) & Node.DOCUMENT_POSITION_FOLLOWING) {
+                    currentSectionIndex = i + 1;
+                }
+            }
+
+            let target = currentSectionIndex + direction;
+            if (target < 0) target = 0;
+            if (target > dividers.length) target = dividers.length;
+
+            jumpToDivider(idx, target === 0 ? null : dividers[target - 1]);
+        }
+
+  - What this does: When bigLinesOnly is false (Alt + ↑/↓), it steps through
+    all 3 divider lines. When bigLinesOnly is true (Alt + Shift + ↑/↓), it
+    ignores the small dashed lines and only hops between Green and Blue lines.
+
+Piece 3C — getDividerLabel (Reads your plain text below the line)
+
+        let outlineTargetBox = 0;
+        let outlineSelectedIdx = 0;
+        let outlineVisibleEntries = [];
+
+        function getDividerLabel(hr) {
+            let node = hr.nextSibling;
+            while (node) {
+                if (node.nodeType === 1 && node.matches('hr.section-divider')) break;
+                const raw = node.nodeType === 3 ? node.nodeValue : (node.innerText || node.textContent || '');
+                const firstLine = raw.split(/\r?\n/).map(s => s.trim()).find(Boolean);
+                if (firstLine) return firstLine.length > 55 ? firstLine.slice(0, 52) + '...' : firstLine;
+                node = node.nextSibling;
+            }
+            if (hr.classList.contains('div-h1')) return 'Untitled Section 1';
+            if (hr.classList.contains('div-h2')) return 'Untitled Section 2';
+            return 'Untitled Note';
+        }
+
+  - What this does: Looks at whatever normal plain text is written right below a
+    divider line and grabs the first line as its label in the menu (cuts it off
+    at 55 characters so the menu stays neat).
+
+Piece 3D — closeOutlineMenu & toggleOutlineMenu (Opens/closes the popup)
+
+        function closeOutlineMenu() {
+            const pop = document.getElementById('outlinePopover');
+            if (pop) pop.classList.remove('active');
+        }
+
+        function toggleOutlineMenu(idx = activeBoxIdx, e = null) {
+            if (e) e.stopPropagation();
+            closeAllMenus();
+            const pop = document.getElementById('outlinePopover');
+            if (pop.classList.contains('active') && outlineTargetBox === idx && !e) {
+                closeOutlineMenu();
+                return;
+            }
+
+            outlineTargetBox = idx;
+            setActiveBoxIndex(idx);
+            const titleText = document.getElementById(`title${idx}`)?.textContent.trim() || `Box ${idx + 1}`;
+            document.getElementById('outlineBoxTitle').textContent = `Jump — ${titleText}`;
+
+            const filterEl = document.getElementById('outlineFilterInput');
+            filterEl.value = '';
+            outlineSelectedIdx = 0;
+            renderOutlineItems();
+
+            if (e && e.target) {
+                const r = e.target.getBoundingClientRect();
+                pop.style.top = `${Math.min(window.innerHeight - 390, r.bottom + 6)}px`;
+                pop.style.left = `${Math.min(window.innerWidth - 330, Math.max(10, r.left - 120))}px`;
+            } else {
+                const cardRect = document.getElementById(`card${idx}`).getBoundingClientRect();
+                pop.style.top = `${Math.max(48, cardRect.top + 36)}px`;
+                pop.style.left = `${Math.min(window.innerWidth - 330, Math.max(10, cardRect.left + 14))}px`;
+            }
+
+            pop.classList.add('active');
+            setTimeout(() => filterEl.focus(), 10);
+        }
+
+  - What this does: Places the popup right near the box you're working in,
+    clears any old search text, opens it, and puts your cursor straight inside
+    the filter bar so you can start typing immediately.
+
+Piece 3E — renderOutlineItems (Builds the clickable list)
+
+        function renderOutlineItems() {
+            const listEl = document.getElementById('outlineList');
+            const query = (document.getElementById('outlineFilterInput').value || '').trim().toLowerCase();
+            const ed = editors[outlineTargetBox];
+            listEl.innerHTML = '';
+            outlineVisibleEntries = [];
+
+            const allDivs = [...ed.querySelectorAll('hr.section-divider')];
+            const bigDivs = allDivs.filter(hr => hr.classList.contains('div-h1') || hr.classList.contains('div-h2'));
+            const dividers = bigDivs.length ? bigDivs : allDivs;
+
+            const entries = [{ level: 0, label: 'Top of Box', hr: null }];
+            dividers.forEach(hr => {
+                const level = hr.classList.contains('div-h1') ? 1 : (hr.classList.contains('div-h2') ? 2 : 3);
+                entries.push({ level, label: getDividerLabel(hr), hr });
+            });
+
+            outlineVisibleEntries = query
+                ? entries.filter(item => item.label.toLowerCase().includes(query))
+                : entries;
+
+            if (!dividers.length && !query) {
+                listEl.innerHTML = '<div class="outline-empty">No dividers in this box yet.<br>Press <b>Alt+Shift+1 / 2 / 3</b> to add one.</div>';
+                return;
+            }
+
+            if (!outlineVisibleEntries.length) {
+                listEl.innerHTML = '<div class="outline-empty">No matching sections found.</div>';
+                return;
+            }
+
+            if (outlineSelectedIdx >= outlineVisibleEntries.length) outlineSelectedIdx = 0;
+
+            outlineVisibleEntries.forEach((entry, i) => {
+                const btn = document.createElement('button');
+                const lvlClass = entry.level === 1 ? 'is-h1' : (entry.level === 2 ? 'is-h2' : (entry.level === 3 ? 'is-note' : ''));
+                btn.className = `outline-item ${lvlClass} ${i === outlineSelectedIdx ? 'selected' : ''}`;
+                const badge = entry.level === 1
+                    ? '<span class="outline-badge h1">1</span>'
+                    : (entry.level === 2 ? '<span class="outline-badge h2">2</span>'
+                    : (entry.level === 3 ? '<span class="outline-badge note">—</span>' : '<span class="outline-badge h1">TOP</span>'));
+                btn.innerHTML = `${badge}<span class="outline-text"></span>`;
+                btn.querySelector('.outline-text').textContent = entry.label;
+                btn.onclick = () => {
+                    jumpToDivider(outlineTargetBox, entry.hr);
+                    closeOutlineMenu();
+                };
+                listEl.appendChild(btn);
+            });
+        }
+
+  - What this does:
+    1.  Checks if the box has Green (1) or Blue (2) dividers. If yes, it shows
+        those cleanly; if not, it automatically shows your Dashed (—) dividers
+        instead.
+    2.  Filters the list as you type.
+    3.  Turns each one into a button that jumps straight to that line when
+        clicked.
+
+Piece 3F — handleOutlineKeydown (Keyboard controls inside the popup)
+
+        function handleOutlineKeydown(e) {
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                closeOutlineMenu();
+                editors[outlineTargetBox]?.focus();
+            } else if (e.key === 'ArrowDown') {
+                e.preventDefault();
+                if (outlineVisibleEntries.length) {
+                    outlineSelectedIdx = (outlineSelectedIdx + 1) % outlineVisibleEntries.length;
+                    renderOutlineItems();
+                    document.querySelector('#outlineList .outline-item.selected')?.scrollIntoView({ block: 'nearest' });
+                }
+            } else if (e.key === 'ArrowUp') {
+                e.preventDefault();
+                if (outlineVisibleEntries.length) {
+                    outlineSelectedIdx = (outlineSelectedIdx - 1 + outlineVisibleEntries.length) % outlineVisibleEntries.length;
+                    renderOutlineItems();
+                    document.querySelector('#outlineList .outline-item.selected')?.scrollIntoView({ block: 'nearest' });
+                }
+            } else if (e.key === 'Enter') {
+                e.preventDefault();
+                const picked = outlineVisibleEntries[outlineSelectedIdx];
+                if (picked) {
+                    jumpToDivider(outlineTargetBox, picked.hr);
+                    closeOutlineMenu();
+                }
+            }
+        }
+
+  - What this does: Lets you press ↑ / ↓ to move through the list, Enter to
+    jump, and Esc to close it without using your mouse.
+
+Step 4: Close the Popup When Clicking Anywhere Else
+
+1. Press Ctrl + F and FIND:
+
+            const isColorPopoverClick = e.target.closest('#colorPopover') || e.target.closest('[onclick*="openColorPicker"]');
+            if (!isColorPopoverClick && colorPopover) {
+                colorPopover.classList.remove('active');
+            }
+
+2. PASTE these 4 lines right underneath it:
+
+            const isOutlineClick = e.target.closest('#outlinePopover') || e.target.closest('.btn-outline-nav');
+            if (!isOutlineClick) {
+                closeOutlineMenu();
+            }
+
+  - What this does: Automatically hides the popup if you click outside of it.
+
+Step 5: Connect the Keyboard Shortcuts
+
+1. Press Ctrl + F and FIND your current arrow-jump shortcut:
+
+            // Jump Sections Across Dividers (Alt+Up / Alt+Down)
+            if (e.altKey && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+                const act = document.activeElement;
+                if (act && act.classList.contains('editor-pane')) {
+                    e.preventDefault();
+                    jumpSection(parseInt(act.dataset.idx, 10), e.key === 'ArrowDown' ? 1 : -1);
+                }
+            }
+
+replace wjth followig
+
+step 2
+
+// Jump Across ALL 3 Divider Types (Alt + Up / Down)
+            if (e.altKey && !e.shiftKey && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+                const act = document.activeElement;
+                if (act && act.classList.contains('editor-pane')) {
+                    e.preventDefault();
+                    jumpSection(parseInt(act.dataset.idx, 10), e.key === 'ArrowDown' ? 1 : -1, false);
+                }
+            }
+
+            // Jump ONLY Across Green & Blue Dividers (Alt + Shift + Up / Down)
+            if (e.altKey && e.shiftKey && (e.key === 'ArrowDown' || e.key === 'ArrowUp')) {
+                const act = document.activeElement;
+                if (act && act.classList.contains('editor-pane')) {
+                    e.preventDefault();
+                    jumpSection(parseInt(act.dataset.idx, 10), e.key === 'ArrowDown' ? 1 : -1, true);
+                }
+            }
+
+            // Open Quick-Jump Outline Popup (Alt + G)
+            if (e.altKey && !isMod && (e.key === 'g' || e.key === 'G')) {
+                e.preventDefault();
+                const act = document.activeElement;
+                const boxIdx = (act && act.classList.contains('editor-pane')) ? parseInt(act.dataset.idx, 10) : activeBoxIdx;
+                toggleOutlineMenu(boxIdx);
+            }
+
+
+// Put a ☰ Quick-Jump button on all 6 boxes
+        document.querySelectorAll('.notepad-card').forEach(card => {
+            const idx = parseInt(card.dataset.pane, 10);
+            const cluster = card.querySelector('.section-nav-cluster');
+            if (cluster) {
+                const btn = document.createElement('button');
+                btn.className = 'btn-sec btn-outline-nav';
+                btn.textContent = '☰';
+                btn.title = 'Quick Jump Menu (Alt+G)';
+                btn.onclick = (e) => toggleOutlineMenu(idx, e);
+                cluster.prepend(btn);
+            }
+        });
+
+        // Initialize App
+        restoreBrowserData();
