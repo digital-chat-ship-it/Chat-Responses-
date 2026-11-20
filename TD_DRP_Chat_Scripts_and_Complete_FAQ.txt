@@ -1,0 +1,550 @@
+TD INSURANCE | AUTO CENTRE / DIRECT REPAIR PROGRAM
+CUSTOMER CHAT SCRIPTS + SCENARIO FAQ
+Based on the six supplied AC/DRP Customer Conversation Job Aid slides
+Internal drafting aid | For use in digital claims chat
+
+======================================================================
+1. HOW TO USE THIS GUIDE
+======================================================================
+
+PURPOSE
+Help a chat agent explain three repair paths briefly, recommend the most practical one, respect customer choice, and document the decision. Copy the CUSTOMER CHAT lines into the conversation; do not paste the INTERNAL AGENT NOTES.
+
+SOURCE LANGUAGE AND DECISION RULE
+"Recommend first. Explain the alternatives. Respect the customer's choice."
+
+Before recommending, review the Shop Locator in ClaimCentre and consider:
+- Customer location and convenience.
+- Available services.
+- Claim requirements.
+- Whether an Auto Centre is reasonably close and practical.
+- Whether a preferred repair facility better meets the customer's needs.
+- Any shop the customer already wants to use.
+
+The three paths in the job aid are:
+PATH A: TDI Auto Centre (AC) — lead where reasonably close and useful for coordinated onsite service.
+PATH B: TDI Preferred Repair Network / Direct Repair Program (DRP) — lead when AC is impractical or a preferred facility is a better fit.
+PATH C: Customer's own shop / non-DRP — support when customer asks for or chooses their own shop or declines the recommendation.
+
+IMPORTANT GUARDRAILS
+- The customer can choose their repair facility. Do not suggest TDI requires a preferred shop.
+- Do not guarantee that any repair, rental, appraisal, settlement, amount or date is covered or approved.
+- Present the lifetime repair warranty only for the Auto Centre or preferred repair facility path, and with BOTH conditions: the customer still owns the vehicle AND remains insured with TD Insurance.
+- For an independent/non-preferred shop, the shop provides its own repair warranty; TDI's preferred-path lifetime repair warranty does not apply.
+- Any rental arrangement depends on applicable coverage, limits and the approved repair timeline. Avoid promising an unlimited or automatically free rental.
+- With a non-preferred shop, the customer may need to coordinate repair dates with the shop and rental arrangements directly with the rental provider.
+- For an Auto Centre, onsite TD Insurance staff support coordination; for a preferred facility, the facility coordinates with TD Insurance. These are different benefits.
+- The job aid mentions cash settlement based on an approved estimate for eligible shop-of-choice repairs; do not present cash settlement as automatic, unconditional, or a guaranteed payment method.
+- If customers ask whether declining repairs or taking cash changes their policy, refer to Advice Centre / GIAC for policy implications. Do not speculate.
+- The job aid mentions a co-payable cheque path, but does not specify its criteria. Check the file/process before describing it.
+- Follow the required internal process for shop availability, appraisal, approvals, documentation and referral. These messages are wording aids, not new operating authority.
+
+======================================================================
+2. FAST CHAT FLOW — THE DEFAULT VERSION
+======================================================================
+
+A. TRANSITION FROM CLAIM INTAKE
+CUSTOMER CHAT:
+"Thank you for those details. I'd also like to go over your repair options so you can choose what works best for you."
+
+B. IF AUTO CENTRE IS PRACTICAL — PRIMARY RECOMMENDATION
+CUSTOMER CHAT:
+"You can choose any repair facility. Based on your location, one option I'd recommend is a TD Insurance Auto Centre. It offers onsite TD Insurance support to coordinate the appraisal and repairs, and eligible repairs have a lifetime warranty while you own the vehicle and remain insured with TD Insurance. If rental coverage applies, the Auto Centre can also help arrange a rental for your appointment. Would you like to use an Auto Centre, or would you prefer another repair shop?"
+
+C. IF A PREFERRED REPAIR SHOP IS MORE PRACTICAL
+CUSTOMER CHAT:
+"You can choose any repair facility. Based on your location, I'd recommend a shop in TD Insurance's Preferred Repair Network. These shops work directly with TD Insurance to coordinate repairs and updates. Eligible repairs include a lifetime warranty while you own the vehicle and remain insured with TD Insurance. If rental coverage applies, your claims adjuster can help arrange a rental for your repair appointment. Would you like help choosing a preferred shop?"
+
+D. IF CUSTOMER ALREADY PREFERS THEIR OWN SHOP
+CUSTOMER CHAT:
+"Of course. You're welcome to use your own repair shop. I can explain how that option differs from our preferred network so you can decide. With your own shop, eligible repairs may be handled through a cash settlement based on the approved estimate, and the shop provides its own repair warranty. If rental coverage applies, you may need to coordinate the repair dates and rental directly. Would you like to proceed with your chosen shop?"
+
+E. IF CUSTOMER ACCEPTS
+CUSTOMER CHAT:
+"Thank you. I'll record your choice and proceed with the applicable next steps for the appraisal and repair arrangement."
+
+F. IF CUSTOMER DECLINES
+CUSTOMER CHAT:
+"Absolutely, the choice is yours. We can explore a different preferred repair facility or a shop of your choice. Which would you prefer?"
+
+G. IF CUSTOMER IS UNDECIDED
+CUSTOMER CHAT:
+"No problem. The main differences are coordination and warranty. Auto Centres offer onsite TD support; preferred shops coordinate directly with TD; and your own shop is also an option, with its own warranty and more coordination on your part. Which would be most convenient for you?"
+
+======================================================================
+3. SHORT COPY-AND-PASTE SNIPPETS BY PURPOSE
+======================================================================
+
+[DRP-01 | ASK PERMISSION]
+"May I quickly go over your repair shop options? You'll be able to choose the one that works best for you."
+
+[DRP-02 | ONE-SENTENCE CHOICE]
+"You're welcome to choose a TD Insurance Auto Centre, another shop in our Preferred Repair Network, or your own repair shop."
+
+[DRP-03 | AUTO CENTRE BENEFITS]
+"A TD Insurance Auto Centre offers onsite TD support to coordinate the appraisal and repairs, a lifetime repair warranty while you own the vehicle and remain insured with TD Insurance, and rental-arrangement assistance if your coverage applies."
+
+[DRP-04 | PREFERRED SHOP BENEFITS]
+"Our preferred repair shops work directly with TD Insurance to coordinate repairs and updates, and eligible repairs include a lifetime warranty while you own the vehicle and remain insured with TD Insurance."
+
+[DRP-05 | NON-PREFERRED SHOP]
+"You can use your own shop. Eligible repairs may proceed through a cash settlement based on an approved estimate, the shop provides its own warranty, and you may need to coordinate repairs and any covered rental directly."
+
+[DRP-06 | OFFER AC]
+"Would you like me to proceed with a TD Insurance Auto Centre?"
+
+[DRP-07 | OFFER PREFERRED SHOP]
+"Would you like me to help you select a preferred repair facility?"
+
+[DRP-08 | ACCEPT CUSTOMER SHOP]
+"Certainly. Would you like me to proceed with your chosen repair facility?"
+
+[DRP-09 | NO PRESSURE]
+"I can explain the differences, but the choice of repair facility is yours."
+
+[DRP-10 | CUSTOMER CHANGES MIND]
+"Of course. We can review the other options before moving ahead."
+
+[DRP-11 | UNKNOWN RENTAL COVERAGE]
+"Rental arrangements depend on your policy coverage, limits and the approved repair timeline. I'll note your rental needs for review."
+
+[DRP-12 | NO GUARANTEED APPOINTMENT]
+"The appointment and shop arrangements will depend on availability and the applicable claim process."
+
+[DRP-13 | NO GUARANTEED APPROVAL]
+"The repair estimate and any related costs will need to be reviewed and approved through the claims process."
+
+[DRP-14 | WRAP UP]
+"I've recorded your repair-facility preference and the next steps on your claim. Thank you for confirming."
+
+======================================================================
+4. FULL CHAT SCRIPTS FOR EACH PATH
+======================================================================
+
+PATH A — TD INSURANCE AUTO CENTRE
+When to lead: An Auto Centre is reasonably close, onsite coordination is useful, and it is practical for the customer.
+
+AGENT:
+"The choice of repair shop is entirely yours. Since an Auto Centre appears convenient for your location, I'd recommend that option first. A TD Insurance Auto Centre provides onsite TD Insurance staff to help coordinate the appraisal and repair process from start to finish. Repairs include a lifetime warranty for as long as you own the vehicle and remain insured with TD Insurance. If rental coverage applies, the Auto Centre can also help arrange a rental for your appointment. Would you like to proceed with the Auto Centre?"
+
+IF YES:
+"Thank you. I'll proceed with the applicable Auto Centre appraisal arrangements and document your selection."
+
+IF NO:
+"That's completely fine. Would you prefer a different shop in TD Insurance's Preferred Repair Network or a repair shop of your own choice?"
+
+PATH B — PREFERRED REPAIR NETWORK / DRP
+When to lead: Auto Centre is not practical; another preferred facility better fits customer location or claim requirements.
+
+AGENT:
+"You may use whichever repair shop you prefer. Based on your location and claim, I'd recommend a facility in TD Insurance's Preferred Repair Network. These facilities meet TD Insurance repair standards and work closely with us to coordinate communication, repairs and updates. Repairs are backed by a lifetime warranty while you own the vehicle and remain insured with TD Insurance. If rental coverage applies, your claims adjuster can help arrange a rental for your repair appointment. Would you like me to help select a preferred repair facility?"
+
+IF YES:
+"Thank you. I'll record your selection and proceed with the applicable appraisal arrangements."
+
+IF NO:
+"No problem. We can check whether an Auto Centre works for you, or you can choose your own repair shop."
+
+PATH C — CUSTOMER'S OWN / NON-PREFERRED REPAIR FACILITY
+When to lead: Customer specifically requests another shop or declines the preferred options.
+
+AGENT:
+"You're welcome to choose your own repair shop, and I'll support your decision. With this option, eligible repairs may proceed through a cash settlement based on the approved estimate. The repair process, the shop's warranty and follow-up work would be handled directly between you and your chosen shop. If rental coverage applies, you may need to confirm the repair dates with your shop and arrange the rental directly with the rental provider. Would you like to proceed with your chosen repair facility?"
+
+IF YES:
+"Thank you. I'll record your chosen shop and proceed with the applicable appraisal steps."
+
+IF CUSTOMER RECONSIDERS:
+"Absolutely. If you prefer, I can also review a TD Insurance Auto Centre or a shop in our Preferred Repair Network."
+
+======================================================================
+5. SCENARIO-BASED CHAT RESPONSES
+======================================================================
+
+SCENARIO 01 — CUSTOMER HAS NO SHOP PREFERENCE
+"I can help with that. Your options include a TD Insurance Auto Centre, a shop within our Preferred Repair Network, or a shop you select yourself. I'll check which option is most practical for your location and explain the benefits before you decide."
+
+SCENARIO 02 — AUTO CENTRE IS NEARBY
+"An Auto Centre appears to be a convenient option for you. It has onsite TD support for appraisal and repair coordination, plus the lifetime repair warranty while you own the vehicle and remain insured with TD Insurance. Would you like to use that option?"
+
+SCENARIO 03 — AUTO CENTRE IS FAR AWAY
+"I understand that travelling to an Auto Centre may not be convenient. We can look at a shop in our Preferred Repair Network closer to you, or you can select your own shop."
+
+SCENARIO 04 — CUSTOMER WANTS FIX AUTO OR ANOTHER PREFERRED SHOP
+"Absolutely. If that location is part of our preferred network and suitable for the claim, we can explore it. Preferred facilities coordinate with TD Insurance and include the lifetime repair warranty while you own the vehicle and remain insured with TD Insurance."
+
+SCENARIO 05 — CUSTOMER ALREADY HAS A TRUSTED BODY SHOP
+"Of course. You can choose a shop you trust. I'll document that preference and explain the appraisal, warranty and rental considerations associated with a non-preferred repair shop."
+
+SCENARIO 06 — CUSTOMER IS WORRIED ABOUT BEING FORCED TO USE TD'S SHOP
+"Not at all. You have the right to choose your repair facility. My role is to explain your options and the benefits so you can make an informed decision."
+
+SCENARIO 07 — CUSTOMER ASKS FOR THE FASTEST OPTION
+"I understand that you'd like to get the repairs underway as soon as possible. Auto Centres offer onsite coordination, and preferred shops work directly with TD Insurance, but appointment and repair timing depend on the shop and claim requirements. We can check which option is most practical."
+
+SCENARIO 08 — CUSTOMER IS WORRIED ABOUT REPAIR QUALITY
+"That's understandable. Shops in our Preferred Repair Network meet TD Insurance repair standards, and the repairs carry the lifetime warranty while you own the vehicle and remain insured with TD Insurance. You're still welcome to choose your own shop if you prefer."
+
+SCENARIO 09 — CUSTOMER WANTS TD TO HANDLE EVERYTHING
+"A TD Insurance Auto Centre may be a good fit because it offers onsite TD support for the appraisal and repairs. If an Auto Centre isn't practical, a preferred shop also works directly with TD Insurance to coordinate the process."
+
+SCENARIO 10 — CUSTOMER NEEDS A RENTAL
+"I can note that you'll need a rental. If rental coverage applies, an Auto Centre can help arrange one for your appointment, or your claims adjuster can help coordinate it with a preferred shop. Coverage, limits and the approved repair timeline still apply."
+
+SCENARIO 11 — CUSTOMER WANTS OWN SHOP AND A RENTAL
+"You can use your chosen shop. If rental coverage applies, you may need to coordinate the repair appointment with your shop and arrange the rental directly with the rental provider, subject to your policy limits and approved repair timeline."
+
+SCENARIO 12 — CUSTOMER THINKS RENTAL IS ALWAYS FREE WITH DRP
+"Rental arrangements depend on the coverage available under your policy. Choosing a preferred repair shop can help with coordination, but it doesn't automatically create rental coverage or remove applicable limits."
+
+SCENARIO 13 — CUSTOMER WANTS CASH INSTEAD OF REPAIRS
+"Depending on eligibility and the approved estimate, a cash settlement may be an option. There may also be policy considerations if repairs are not completed, so I'd recommend discussing any policy impact with our Advice Centre before deciding."
+
+SCENARIO 14 — CUSTOMER WANTS OWN SHOP BUT ASKS FOR TD LIFETIME WARRANTY
+"You can choose your own shop. The lifetime repair warranty described for TD Insurance Auto Centres and preferred repair facilities would not apply to a non-preferred shop. Any warranty would be provided by your chosen shop."
+
+SCENARIO 15 — CUSTOMER'S OWN SHOP FINDS ADDITIONAL DAMAGE
+"Please ask the shop to send the supporting information to the assigned appraiser for review. If the additional damage is confirmed as related to the claim, the settlement can be reviewed and adjusted as appropriate."
+
+SCENARIO 16 — CUSTOMER FEARS LOSS OF CONTROL
+"The decision remains yours. I can explain the benefits and differences, and we'll document the shop you choose."
+
+SCENARIO 17 — CUSTOMER IS UPSET ABOUT PREVIOUS REPAIRS
+"I'm sorry the previous experience was frustrating. I understand why you'd want to be careful about choosing a repair facility. I can explain the options and document your preference without pressuring you to use a particular shop."
+
+SCENARIO 18 — CUSTOMER ASKS WHICH OPTION IS BEST
+"That depends on what's practical for you. An Auto Centre offers onsite TD support; preferred shops coordinate directly with TD; and your own shop gives you flexibility, although warranty and coordination arrangements differ. Based on your location, I'd start with [confirmed practical option]."
+
+SCENARIO 19 — CUSTOMER HAS ALREADY BOOKED THEIR OWN SHOP
+"Thanks for letting me know. You're welcome to use your own shop. I'll document its details and check the applicable appraisal and settlement steps before we proceed."
+
+SCENARIO 20 — CUSTOMER WANTS TO CHANGE SHOPS AFTER CHOOSING
+"I can help review the available options. Before making changes, we'll need to check what has already been arranged or approved on the claim so the next steps are handled correctly."
+
+SCENARIO 21 — CUSTOMER ASKS IF REPAIRS ARE APPROVED NOW
+"The shop selection is separate from approval of the estimate or repair costs. Those details still need to follow the applicable claims review and approval process."
+
+SCENARIO 22 — CUSTOMER HAS NO RENTAL COVERAGE CONFIRMED
+"I don't want to promise a rental until the applicable coverage is confirmed. I can record that you need transportation so it can be considered in the claim review."
+
+SCENARIO 23 — CUSTOMER ASKS WHO WILL PROVIDE REPAIR UPDATES
+"With a preferred repair facility, the shop works directly with TD Insurance to coordinate communication and progress updates. At an Auto Centre, TD Insurance staff are onsite to help coordinate the process. For your own shop, you would generally coordinate repair progress directly with that shop."
+
+SCENARIO 24 — CUSTOMER ASKS IF THEY CAN KEEP DRIVING UNTIL REPAIR
+"That depends on the vehicle's condition and safety. I can't determine roadworthiness through chat. If there is any concern that the vehicle is unsafe to drive, please don't drive it; we can review the appropriate next steps."
+
+SCENARIO 25 — VEHICLE IS NON-DRIVABLE / TOWED
+"I'm sorry your vehicle isn't drivable. I'll note its current location and towing needs. We should check the suitable repair and appraisal arrangements before directing the vehicle to a location."
+
+SCENARIO 26 — CUSTOMER WANTS AN IMMEDIATE APPOINTMENT
+"I understand you'd like the earliest possible appointment. We can check the relevant shop arrangements, but I wouldn't want to promise a date before availability is confirmed."
+
+SCENARIO 27 — CUSTOMER WANTS TO KNOW IF TD PAYS SHOP DIRECTLY
+"Payment arrangements can differ depending on the repair path and claim. I'll confirm the applicable process rather than promise a specific payment method."
+
+SCENARIO 28 — CUSTOMER WANTS TO KNOW ABOUT A CO-PAYABLE CHEQUE
+"That may be an available settlement path in some circumstances. I'd need to check the claim and applicable process before confirming whether it applies to your repair choice."
+
+SCENARIO 29 — CUSTOMER DECLINES ALL RECOMMENDATIONS
+"That's completely fine. Your repair-facility choice is yours. Please let me know the shop you'd like to use, and I'll document it and explain the relevant next steps."
+
+SCENARIO 30 — CUSTOMER WANTS THE SIMPLEST EXPLANATION
+"The main difference is support: an Auto Centre has TD staff onsite, preferred shops work closely with TD, and with your own shop you'd generally handle more of the repair coordination yourself. You can choose any of the three."
+
+SCENARIO 31 — CUSTOMER WANTS A SHOP NEAR HOME OR WORK
+"Convenience matters. Let's look at your preferred area and available repair facilities so you can choose an option that suits your location."
+
+SCENARIO 32 — CUSTOMER HAS A SPECIAL VEHICLE OR REPAIR NEED
+"I'd want to make sure the facility is appropriate for your vehicle and repair needs. We can check the available services before recommending a shop."
+
+SCENARIO 33 — CUSTOMER ASKS WHETHER WARRANTY IS STILL VALID AFTER SELLING VEHICLE
+"The lifetime repair warranty described in this program applies while you own the vehicle and remain insured with TD Insurance. If you sell the vehicle, that stated condition would no longer be met."
+
+SCENARIO 34 — CUSTOMER ASKS WHETHER WARRANTY REMAINS AFTER LEAVING TD
+"The lifetime repair warranty described in this program applies while you own the vehicle and remain insured with TD Insurance. Leaving TD Insurance would mean that stated condition is no longer met."
+
+SCENARIO 35 — CUSTOMER DOES NOT WANT TO DISCUSS REPAIRS YET
+"That's okay. I'll note that you haven't selected a repair facility yet. We can proceed with the applicable claim steps and revisit the choice when you're ready."
+
+SCENARIO 36 — CUSTOMER IS ANGRY ABOUT AN ESTIMATE DIFFERENCE
+"I understand why that difference is concerning. The repair estimate needs to be reviewed through the claims process. If the shop has supporting details for additional claim-related damage, it can submit those to the assigned appraiser for review."
+
+SCENARIO 37 — CUSTOMER ASKS IF OWN SHOP CAN BEGIN BEFORE APPROVAL
+"I'd recommend confirming the appraisal and approval steps before authorizing work, because the shop's proposed costs may not all be approved. I'll document your question for the appropriate claims review."
+
+SCENARIO 38 — CUSTOMER ASKS WHETHER TD GUARANTEES OWN SHOP'S WORK
+"For a non-preferred repair shop, the shop is responsible for its own repair warranty. TD Insurance's preferred-path lifetime repair warranty does not apply."
+
+SCENARIO 39 — CUSTOMER CONFLATES AUTO CENTRE WITH PREFERRED SHOP
+"Both are options within the TD repair pathways. The key distinction is that an Auto Centre has TD Insurance staff onsite to support coordination; another preferred repair facility works directly with TD Insurance but is not described as having onsite TD staff."
+
+SCENARIO 40 — CUSTOMER ASKS IF USING THEIR OWN SHOP WILL AFFECT POLICY
+"There may be policy considerations, particularly if a cash settlement is taken and repairs aren't completed. Our Advice Centre / GIAC can review potential policy implications before you decide."
+
+======================================================================
+6. FAQ — CUSTOMER QUESTIONS AND READY-TO-SEND ANSWERS
+======================================================================
+
+FAQ 01. DO I HAVE TO USE TD INSURANCE'S SHOP?
+"No. You can choose the repair facility that works best for you. I can explain the Auto Centre, Preferred Repair Network and shop-of-choice options so you can make an informed decision."
+
+FAQ 02. CAN I USE MY OWN BODY SHOP?
+"Yes, you're welcome to use your own body shop. Eligible repairs may proceed through a cash settlement based on the approved estimate, and your shop would provide its own repair warranty."
+
+FAQ 03. WHAT IS A TD INSURANCE AUTO CENTRE?
+"It's a repair option with TD Insurance staff onsite to help coordinate the appraisal and repairs. Eligible repairs include a lifetime warranty while you own the vehicle and remain insured with TD Insurance."
+
+FAQ 04. WHAT IS A PREFERRED REPAIR SHOP / DRP?
+"It's a repair facility in TD Insurance's Preferred Repair Network. These shops meet TD Insurance repair standards and work closely with TD to coordinate communication, repairs and progress updates."
+
+FAQ 05. WHAT IS THE DIFFERENCE BETWEEN AN AUTO CENTRE AND A DRP SHOP?
+"At an Auto Centre, TD Insurance staff are onsite to coordinate the process. A preferred repair shop works directly with TD Insurance to coordinate repairs and updates. Both have the stated lifetime repair warranty conditions."
+
+FAQ 06. WHY DO YOU RECOMMEND A PREFERRED REPAIR FACILITY?
+"It can make communication and coordination easier. Preferred facilities work directly with TD Insurance and offer the lifetime repair warranty while you own the vehicle and remain insured with TD Insurance."
+
+FAQ 07. WHAT IF A TD AUTO CENTRE ISN'T CONVENIENT?
+"We can look at a preferred repair facility that's more practical for your location or claim needs. You're also welcome to use your own shop."
+
+FAQ 08. CAN I PICK FIX AUTO OR ANOTHER PREFERRED SHOP?
+"Yes, we can review that option if the selected location is part of the preferred network and appropriate for the claim."
+
+FAQ 09. IS THE WARRANTY REALLY FOR LIFE?
+"Repairs through an Auto Centre or preferred repair facility include a lifetime warranty while you own the vehicle and remain insured with TD Insurance. Both conditions apply."
+
+FAQ 10. WHAT IF I SWITCH INSURERS?
+"The program's stated lifetime repair warranty is conditional on remaining insured with TD Insurance as well as owning the vehicle."
+
+FAQ 11. WHAT IF I SELL MY VEHICLE?
+"The program's stated lifetime repair warranty applies while you own the vehicle and remain insured with TD Insurance."
+
+FAQ 12. IS MY OWN SHOP'S WARRANTY THE SAME?
+"Not necessarily. With your own non-preferred shop, any repair warranty is supplied by that shop. You'd need to ask them directly about its terms."
+
+FAQ 13. DOES TD WARRANTY APPLY TO NON-PREFERRED SHOP REPAIRS?
+"No. TD Insurance's lifetime repair warranty for Auto Centres and preferred facilities doesn't apply to a non-preferred repair shop."
+
+FAQ 14. WILL I GET A FREE RENTAL CAR?
+"That depends on your policy's rental coverage, limits and the approved repair timeline. The repair shop option helps determine how arrangements are coordinated; it does not automatically provide rental coverage."
+
+FAQ 15. WHO ARRANGES THE RENTAL AT AN AUTO CENTRE?
+"If rental coverage applies, the Auto Centre can help arrange a rental for your appointment."
+
+FAQ 16. WHO ARRANGES THE RENTAL WITH A PREFERRED SHOP?
+"If rental coverage applies, your claims adjuster can help arrange a rental for the repair appointment. The preferred facility can help coordinate appointment timing."
+
+FAQ 17. WHO ARRANGES THE RENTAL WITH MY OWN SHOP?
+"If rental coverage applies, you may need to confirm timing with your own shop and arrange the rental directly with the rental provider, subject to policy limits and approved repair timing."
+
+FAQ 18. WILL THE RENTAL LAST UNTIL MY VEHICLE IS FIXED?
+"Rental use is subject to applicable policy coverage, limits and the approved repair timeline. I wouldn't want to guarantee the full repair duration without checking those details."
+
+FAQ 19. WHAT IF REPAIRS TAKE LONGER THAN EXPECTED?
+"Any rental extension or change in approved repair timing would need to be reviewed against the claim and applicable coverage. Please flag the delay so it can be assessed."
+
+FAQ 20. DOES DRP MAKE REPAIRS FASTER?
+"Preferred repair options offer closer coordination, but actual appraisal, appointment and repair timing depend on availability and the work required. I can't guarantee a faster completion date."
+
+FAQ 21. DO I HAVE TO BOOK THE APPRAISAL MYSELF?
+"The appraisal arrangements depend on the repair path. An Auto Centre provides onsite coordination; preferred shops coordinate directly with TD Insurance. I'll explain the next step for the option you select."
+
+FAQ 22. CAN I GET CASH INSTEAD OF REPAIRS?
+"Cash settlement may be available for eligible repairs based on the approved estimate. It depends on the claim and applicable process, and any policy implications should be discussed with Advice Centre / GIAC before deciding not to repair."
+
+FAQ 23. HOW MUCH CASH WILL I RECEIVE?
+"Any eligible cash settlement would be based on the approved estimate and applicable claim considerations. An amount would need to be confirmed through the claims review."
+
+FAQ 24. IF MY OWN SHOP CHARGES MORE THAN THE ESTIMATE, WILL TD PAY IT?
+"Any additional costs need to go through the appropriate appraisal review. Please have the shop provide supporting information rather than assume the difference is approved."
+
+FAQ 25. WHAT IF MY SHOP FINDS MORE DAMAGE?
+"Ask the shop to send supporting information to the assigned appraiser. If the additional damage is confirmed as related, the settlement can be reviewed and adjusted as appropriate."
+
+FAQ 26. CAN I REPAIR AT MY OWN SHOP AND STILL HAVE TD COORDINATE EVERYTHING?
+"With a non-preferred shop, the repair process, warranty and follow-up are generally managed directly between you and the shop. If rental coverage applies, you may also need to coordinate the rental directly."
+
+FAQ 27. WHO PROVIDES REPAIR PROGRESS UPDATES?
+"Preferred facilities work closely with TD Insurance to coordinate progress updates. At an Auto Centre, TD staff support onsite coordination. With your own shop, you would generally communicate with the shop directly."
+
+FAQ 28. DOES TD PAY THE PREFERRED SHOP DIRECTLY?
+"Payment arrangements depend on the applicable claim and repair process. I'll confirm the process for your repair choice before advising how payment will be handled."
+
+FAQ 29. WHAT IS A CO-PAYABLE CHEQUE?
+"A co-payable cheque may be relevant to some shop-of-choice settlements, but I would need to verify the specific process and eligibility on your claim before explaining how it applies."
+
+FAQ 30. WILL A CASH SETTLEMENT AFFECT MY INSURANCE POLICY?
+"There may be policy considerations if you choose a cash settlement and don't complete repairs. Before deciding, please speak with Advice Centre / GIAC about any potential impact."
+
+FAQ 31. DOES CHOOSING A DRP SHOP CHANGE MY DEDUCTIBLE?
+"Your deductible is determined by the applicable coverage and claim, not something I would assume changes because of a repair-facility choice. I'll review the deductible information available on your claim separately."
+
+FAQ 32. DOES CHOOSING A SHOP MEAN MY CLAIM IS APPROVED?
+"No. Selecting a shop helps us plan the repair process, but coverage, estimate and repair-related approvals still follow the claim review process."
+
+FAQ 33. CAN I CHANGE MY MIND ABOUT THE SHOP?
+"We can review your options. First, we'll need to check whether an appraisal, appointment or repair arrangement has already been made and what steps are required to change it."
+
+FAQ 34. CAN I CHOOSE A SHOP OUTSIDE THE PREFERRED NETWORK?
+"Yes. You can select your own shop. The settlement, warranty and rental coordination may work differently than with an Auto Centre or preferred facility."
+
+FAQ 35. HOW DO YOU PICK WHICH SHOP TO RECOMMEND?
+"We consider your location, convenience, services offered by the facility and the needs of the claim. Your choice remains the deciding factor."
+
+FAQ 36. WHAT IF THE PREFERRED SHOP IS TOO FAR?
+"We can look at another preferred location or a shop of your choice. We want the option to be practical for you."
+
+FAQ 37. WHAT IF MY VEHICLE HAS SPECIAL REPAIR REQUIREMENTS?
+"We'll need to check the available services and whether a particular facility suits your vehicle and claim before recommending it."
+
+FAQ 38. WHAT IF I DON'T WANT TO FIX MY CAR?
+"You can discuss available settlement options with your claims adjuster. There may be policy implications if repairs are not completed, so please check with Advice Centre / GIAC before making that decision."
+
+FAQ 39. CAN I TAKE CASH AND REPAIR THE VEHICLE LATER?
+"That would depend on the approved settlement and applicable claim process. If you're considering not repairing right away, Advice Centre / GIAC can explain any potential policy implications."
+
+FAQ 40. WHY CAN'T YOU GUARANTEE A REPAIR COMPLETION DATE?
+"The timing depends on the appraisal, shop availability, parts and the repairs required. We can coordinate next steps, but the completion date must be confirmed through the repair process."
+
+FAQ 41. WHAT IF I'M UNHAPPY WITH A PREFERRED SHOP'S REPAIR?
+"Please let us know the concern so it can be reviewed under the applicable repair process and warranty terms. The job aid identifies a lifetime warranty while you own the vehicle and remain insured with TD Insurance."
+
+FAQ 42. WHAT IF I'M UNHAPPY WITH MY OWN SHOP'S REPAIR?
+"Because the shop provides its own repair warranty, you would need to discuss the warranty and follow-up work directly with that shop."
+
+FAQ 43. IS MY OWN SHOP REQUIRED TO FOLLOW TD'S ESTIMATE?
+"Eligible cash settlement may be based on the approved estimate, and any proposed additional claim-related damage should be supported and sent for appraisal review. The specific settlement terms must be confirmed for your claim."
+
+FAQ 44. CAN YOU RECOMMEND THE CLOSEST SHOP?
+"I can check available facilities using our Shop Locator and consider location, convenience, services and claim needs before recommending an option."
+
+FAQ 45. WHAT HAPPENS AFTER I PICK A SHOP?
+"We'll record your choice, document the shop information and proceed with the applicable appraisal and claim next steps."
+
+FAQ 46. DO I NEED TO SEND ANYTHING FROM THE REPAIR SHOP?
+"Requirements depend on the repair path and claim. If the shop finds further damage, it should send supporting information to the assigned appraiser for review."
+
+FAQ 47. WHAT IF I ONLY WANT AN ESTIMATE RIGHT NOW?
+"We can review the applicable appraisal path without requiring you to commit to a repair facility immediately. Any repairs or settlement would still be subject to the claims process."
+
+FAQ 48. CAN I SEE ALL MY OPTIONS BEFORE DECIDING?
+"Absolutely. I can review the Auto Centre, Preferred Repair Network and shop-of-choice options, including how coordination, warranty and rental arrangements differ."
+
+FAQ 49. WHAT IF I DON'T KNOW WHETHER A SHOP IS PREFERRED?
+"We can check the Shop Locator and confirm whether that specific facility is in TD Insurance's Preferred Repair Network."
+
+FAQ 50. ARE YOU SAYING MY OWN SHOP IS A BAD OPTION?
+"Not at all. You can use the shop that works best for you. I'm simply explaining the differences so you're aware of the coordination, warranty and settlement considerations before choosing."
+
+======================================================================
+7. OBJECTION-HANDLING MICRO-CONVERSATIONS
+======================================================================
+
+OBJECTION A — "STOP PUSHING TD'S SHOPS."
+CUSTOMER: "Stop pushing TD's shops. I'm going to my mechanic."
+AGENT: "I understand, and I respect your choice. You're welcome to use your own repair shop. I'll document that preference and explain the applicable appraisal and warranty steps."
+
+OBJECTION B — "I WANT THAT LIFETIME WARRANTY, BUT ONLY AT MY SHOP."
+CUSTOMER: "Can my own shop get your lifetime warranty?"
+AGENT: "The lifetime warranty in this program applies to repairs through an Auto Centre or preferred repair facility while you own the vehicle and remain insured with TD Insurance. At a non-preferred shop, the shop supplies its own warranty."
+
+OBJECTION C — "YOU SAID FREE RENTAL."
+CUSTOMER: "You promised me a free rental."
+AGENT: "I'm sorry for the confusion. Rental arrangements depend on your policy's rental coverage, limits and the approved repair timeline. I'll help clarify what applies to your claim."
+
+OBJECTION D — "THAT SHOP IS TOO FAR."
+CUSTOMER: "I'm not driving across town."
+AGENT: "That makes sense. Convenience is important. Let's look at a closer preferred facility, or you can choose your own shop."
+
+OBJECTION E — "DO I HAVE TO DECIDE NOW?"
+CUSTOMER: "I'm not ready to choose."
+AGENT: "That's fine. I can note that you haven't chosen a repair facility yet and explain what next steps can proceed in the meantime."
+
+OBJECTION F — "WHY WON'T YOU PAY MY SHOP'S PRICE?"
+CUSTOMER: "My body shop is charging more."
+AGENT: "I understand your concern. The approved estimate is the basis of the applicable settlement. If the shop has evidence of additional damage related to the claim, it can send that information to the assigned appraiser for review."
+
+OBJECTION G — "CASH IS EASIER."
+CUSTOMER: "Just send me the money."
+AGENT: "We can review whether a cash settlement is available based on the approved estimate. Before deciding not to complete repairs, it's also important to speak with Advice Centre / GIAC about any potential policy implications."
+
+OBJECTION H — "WHICH ONE WOULD YOU PICK?"
+CUSTOMER: "What do you think I should choose?"
+AGENT: "I'd recommend the option that's most practical for your location and repair needs. If an Auto Centre is convenient, onsite coordination can be helpful. Otherwise, a preferred shop offers direct coordination with TD, and you're always free to use your own shop."
+
+======================================================================
+8. DECISION TREE — INTERNAL QUICK REFERENCE
+======================================================================
+
+START -> Review claim needs, Shop Locator, customer location, convenience and available services.
+
+Q1. Has the customer already selected their own shop or declined preferred options?
+  YES -> Path C. Explain cash settlement possibility, shop warranty, customer coordination, rental considerations. Respect choice.
+  NO  -> Q2.
+
+Q2. Is a TD Insurance Auto Centre reasonably close and practical?
+  YES -> Path A. Offer Auto Centre benefits, then ask for customer's choice.
+  NO  -> Q3.
+
+Q3. Is a preferred repair facility suitable and more convenient?
+  YES -> Path B. Offer Preferred Repair Network benefits, then ask for choice.
+  NO  -> Explain shop-of-choice option and any suitable alternatives, without implying preferred facilities are mandatory.
+
+IF CUSTOMER ACCEPTS -> Record chosen path and shop; proceed with applicable appraisal arrangements.
+IF CUSTOMER DECLINES -> Offer the alternative paths without pressure.
+IF CUSTOMER IS UNSURE -> Explain the key differences and record decision pending.
+IF CASH / NO REPAIR / POLICY IMPACT -> Refer policy-impact questions to Advice Centre / GIAC.
+IF ADDITIONAL DAMAGE -> Have shop submit evidence to assigned appraiser.
+IF RENTAL -> Check coverage and limits; coordinate according to chosen path.
+
+======================================================================
+9. POST-CHAT DOCUMENTATION CHECKLIST — INTERNAL ONLY
+======================================================================
+
+[ ] Clearly documented that customer has the choice of repair facility.
+[ ] Considered/communicated Auto Centre first when practical.
+[ ] Discussed a Preferred Repair Network facility when appropriate.
+[ ] Discussed shop-of-choice / non-preferred option if requested or chosen.
+[ ] Explained applicable warranty conditions for both preferred and non-preferred paths.
+[ ] Explained rental expectations, including coordination responsibilities if non-preferred and coverage applies.
+[ ] Documented selected repair path and specific shop details (where known).
+[ ] Documented appraisal arrangement / status and next steps.
+[ ] Documented Proof of Loss status where required by the claim process.
+[ ] For shop of choice, verified and documented whether cash-settlement eligibility or co-payable cheque pathway applies.
+[ ] If customer considers cash without repairs, referred policy-impact questions to Advice Centre / GIAC.
+[ ] Recorded any needed follow-up and unresolved coverage or approval questions.
+
+SUGGESTED INTERNAL CLAIM NOTE — SELECTED PREFERRED PATH
+"Repair facility options discussed. Customer advised of freedom to choose. [Auto Centre / preferred shop] recommended based on [location/convenience/claim needs]. Explained coordination, applicable lifetime warranty conditions (ownership and continued TD Insurance coverage), and rental arrangements subject to coverage/limits. Customer selected [facility]. Appraisal/next steps: [details]."
+
+SUGGESTED INTERNAL CLAIM NOTE — SELECTED NON-PREFERRED PATH
+"Customer advised of repair-facility choice and preferred options. Customer chose [shop]. Explained possibility of eligible cash settlement based on approved estimate, that shop supplies its own warranty, and that customer may need to coordinate repairs and covered rental directly. Cash settlement/co-payable cheque applicability: [verified result/pending]. Proof of Loss: [status]. Appraisal/next steps: [details]. Policy-impact referral made if applicable."
+
+SUGGESTED INTERNAL CLAIM NOTE — NO SELECTION
+"Repair paths and key differences explained. Customer has not selected a repair facility. Preference/next follow-up: [details]. No shop commitment or repair approval represented."
+
+======================================================================
+10. SOURCE ALIGNMENT / MATTERS NOT ESTABLISHED BY THE SLIDES
+======================================================================
+
+THE SIX PROVIDED SLIDES EXPRESSLY SUPPORT:
+- Recommend Auto Centre first when practical, otherwise Preferred Repair Network, while preserving shop of choice.
+- Auto Centre: onsite TD staff for appraisal/repair coordination; lifetime repair warranty with the two conditions; possible rental arrangement if rental coverage applies.
+- Preferred Repair Network: TD repair standards, communication/coordination/progress support; lifetime repair warranty with the two conditions; claims adjuster may arrange rental if coverage applies.
+- Customer's own shop: eligible repairs may use cash settlement based on approved estimate; shop's own warranty; customer/shop directly handle repairs and follow-up; customer may need to handle rental coordination directly.
+- Additional damage: supporting information to assigned appraiser; any confirmed related damage can lead to review/adjustment.
+- Policy impacts of cash/no repair: refer to Advice Centre / GIAC.
+- Documentation items: choice, the options reviewed, warranty, rental, selected path, shop details, Proof of Loss, cash settlement/co-payable path, follow-ups.
+
+THE SLIDES DO NOT ESTABLISH:
+- Exact shop names, availability, distance, appointment slots or repair turnaround.
+- Whether an individual claim has approved coverage, a rental entitlement or a particular deductible.
+- Whether rentals are always complimentary, unlimited, or available to customers lacking rental coverage.
+- Exact details/conditions for cash settlement versus co-payable cheque.
+- That all shop-of-choice claims receive cash settlement.
+- That TD pays every chosen shop directly, or that repair costs are automatically approved.
+- Detailed exclusions, transferability or claims handling mechanics of the lifetime warranty beyond the stated ownership/insurance conditions.
+- Specific towing, parts, storage, diminished value, tax or other cost entitlements.
+
+Any added wording about reviewing the file, road safety, approvals, costs or availability is cautious agent guidance rather than a new benefit promised in the source.
+
+END OF DOCUMENT
